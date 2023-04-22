@@ -10821,3 +10821,38 @@ textarea.form-control-lg {
   }
 }
 /* Custom CSS */
+
+/* placeholder de contactanos */
+#email-suscribe{
+  width: 300px;
+  text-align: center;
+}
+
+.contactanos{
+  padding-bottom: 2rem;
+  padding-top: 2rem;  
+}
+
+.Enchanteur-img-footer{
+  margin: 2rem;
+  border: 2rem;
+  padding: 2rem;
+  content: 2rem;
+}
+
+footer{
+  background-color: #231f20;
+}
+
+.derechos-reservados{
+  opacity: 0.5;
+}
+
+.iconos-footer{
+  font-size: 2rem;
+}
+
+
+
+
+  
