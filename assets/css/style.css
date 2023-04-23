@@ -10826,11 +10826,29 @@ textarea.form-control-lg {
 #email-suscribe{
   width: 300px;
   text-align: center;
+  margin-left: 1rem;
+  padding: 10px;
+}
+
+.btn-suscribe{
+  margin-left: 10px;
+  background-color: #d7dedc;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 1rem;
 }
 
 .contactanos{
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   padding-top: 2rem;  
+}
+
+.contactanos-fondo{
+  background-image: url(../img/tuto-2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .Enchanteur-img-footer{
@@ -10846,12 +10864,17 @@ footer{
 
 .derechos-reservados{
   opacity: 0.5;
+  font-size: small;
 }
 
 .iconos-footer{
   font-size: 2rem;
+  background-color: #d7dedc;
 }
 
+address{
+  opacity: 0.5;
+}
 
 
 

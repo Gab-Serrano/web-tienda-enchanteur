@@ -17,19 +17,27 @@
 </head>
 <body>
     <!--seccion contactanos-->
-    <div class="container text-center contactanos">
-        <h1>No te pierdas ni un truco</h1> <br><br>
-        <h4>Suscríbete a nuestro boletín de magia</h4> <br><br>
-        <p class="text-muted">Recibe las últimas novedades, consejos y trucos de los mejores magos del mundo en tu entrada</p>
-        <input type="email" name="email" id="email-suscribe" placeholder="aprendiz.de.mago@magia.com"><br><br>
-        <button type="button" class="btn btn-dark">Suscribirse</button><br><br>
+    <div class="container-fluid text-center contactanos">
+        <h1>No te pierdas ni un truco</h1> <br>
+        <div class="row contactanos-fondo text-center ">
+            <div class="row container-fluid">
+                <h4 class="text-white">Suscríbete a nuestro boletín de magia</h4> <br><br><br>
+                <p class="text-white">Recibe las últimas novedades, consejos y trucos de los mejores magos del mundo en tu entrada</p>
+                <div class="">
+                    <input  type="email" name="email" id="email-suscribe" placeholder="aprendiz.de.mago@magia.com"><br><br> 
+                </div>
+                <div class="">
+                    <button type="button" class="btn btn-secondary  float-right text-dark  btn-suscribe">Suscribirse</button><br><br>
+                </div>
+            </div>
+        </div>   
     </div>
     <!--footer-->
     <footer>
         <div class="row container-fluid text-white text-center">
             <img class="Enchanteur-img-footer row img-fluid col-md-6 mx-auto" src="imgs/echanteur min.png" alt="">
             <h5>Siguenos en redes:</h5> <br><br><br>
-            <div class="row  iconos-footer bg-white ">
+            <div class="row  iconos-footer  ">
                 <div class="border rounded p-3 d-inline-block col-3">
                     <i class="bi bi-facebook   text-dark"></i>
                 </div>
@@ -48,8 +56,8 @@
             <br><br>
             <address>
                 Calle de los Magos 123, <br>
-                valparaíso, Chile. <br>
-                +56 9 12345678 <br>
+                valparaíso, Chile. <br><br>
+                +56 9 12345678 <br><br>
                 <u>info@enchanteur.cl</u> 
             </address>
             <p class="derechos-reservados">@ 2023 Enchanteur. Todos los derechos reservados</p>
