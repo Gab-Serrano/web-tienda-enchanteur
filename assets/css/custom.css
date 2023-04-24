@@ -1,8 +1,11 @@
 * {
     /* Colors */
     --bg-color-primary: #231F20;
-    --bg-color-secondary: #1a1818;
+    --bg-color-secondary: #D7DEDC;
+    
     --text-color-primary: #D7DEDC;
+    --text-color-secondary: #231F20;
+    --text-color-tertiary: #AD6A6C;
     --text-color-accent: #F2F2F2;
 
     /* Font family */
