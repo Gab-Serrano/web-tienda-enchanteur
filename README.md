@@ -15,4 +15,3 @@ Proyecto de desarrollo web basado en HTML y CSS bajo el framework BootStrap.
 ## Versionado
 
 ### v 1.0
-* Importación de la 
