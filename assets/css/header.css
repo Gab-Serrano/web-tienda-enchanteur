@@ -1,0 +1,13 @@
+header {
+  font-size: 0.8rem;
+  background-color: var(--bg-color-secondary);
+}
+
+.icon-header{
+  color: var(--text-color-secondary);
+}
+
+.header-contact a{
+  color: var(--text-color-secondary);
+  text-decoration: none;
+}
