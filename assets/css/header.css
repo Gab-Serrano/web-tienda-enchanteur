@@ -18,9 +18,17 @@ header {
 }
 
 .logo{
-  padding: 2rem;
+  width: 30%;
 }
 
-.logo img{
-  width: 18rem;
+@media (min-width: 768px) {
+  .logo{
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 990px) {
+  .logo{
+    max-width: 40%;
+  }
 }
