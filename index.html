@@ -92,7 +92,7 @@
               <span class="d-none d-lg-flex">Buscar</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex gap-2" href="#"><i class="bs bi-person-fill"></i>
+            <a class="nav-link d-none d-lg-flex gap-2" href="#"><i class="bs bi-person-fill"></i>
               <span class="d-none d-lg-flex">Iniciar sesión</span></a>
           </li>
           <li class="nav-item">
@@ -109,7 +109,7 @@
       <div class="offcanvas-header py-2">
         <a class="logo-offcanvas" href="../index.html">
           <img src="../assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur" width="210">
-      </a>
+        </a>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <!-- offcanvasNavbar - body -->
@@ -162,7 +162,75 @@
       </div>
     </div>
   </nav>
-
+  <!-- About us-->
+  <section>
+    <div class="row text-center about-us">
+      <h1 class="titulo-nosotros">Nosotros</h1>
+    </div>
+    <div class="row img-about-us">
+      <img src="../assets/img/about-us-img.jpg" alt="">
+    </div>
+    <div class="row">
+      <p class="text-center p-about-us">
+        En nuestra tienda de mazoz de cartas y trucos de magia, nos apasiona ofrecer productos de alta calidad para
+        magos de todos los niveles. ¡Descubre la magia con nosotros!
+      </p>
+      <button type="button" class="btn btn-dark mx-auto btn-saber-mas">Saber más</button>
+    </div>
+  </section>
+  <!-- Productos-->
+  <!-- Tutoriales-->
+  <!-- Suscribe  -->
+  <section>
+    <div class="container-fluid text-center contactanos">
+      <h1>No te pierdas ni un truco</h1> <br>
+      <div class="row contactanos-fondo text-center ">
+        <div class="row container-fluid">
+          <h4 class="text-white">Suscríbete a nuestro boletín de magia</h4> <br><br><br>
+          <p class="text-white">Recibe las últimas novedades, consejos y trucos de los mejores magos del mundo en tu
+            entrada</p>
+          <div class="">
+            <input type="email" name="email" id="email-suscribe" placeholder="aprendiz.de.mago@magia.com"><br><br>
+          </div>
+          <div class="">
+            <button type="button"
+              class="btn btn-secondary  float-right text-dark  btn-suscribe">Suscribirse</button><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="row container-fluid text-white text-center">
+      <img class="Enchanteur-img-footer row img-fluid col-md-6 mx-auto" src="../assets/img/" alt="">
+      <h5>Siguenos en redes:</h5> <br><br><br>
+      <div class="row  iconos-footer  ">
+        <div class="border rounded p-3 d-inline-block col-3">
+          <i class="bi bi-facebook   text-dark"></i>
+        </div>
+        <div class="border rounded p-3 d-inline-block col-3">
+          <i class="bi bi-twitter    text-dark"></i>
+        </div>
+        <div class="border rounded p-3 d-inline-block col-3">
+          <i class="bi bi-instagram  text-dark"></i>
+        </div>
+        <div class="border rounded p-3 d-inline-block col-3">
+          <i class="bi bi-tiktok     text-dark"></i>
+        </div>
+      </div>
+      <br><br><br>
+      <h5>Encuentranos en:</h5>
+      <br><br>
+      <address>
+        Calle de los Magos 123, <br>
+        valparaíso, Chile. <br><br>
+        +56 9 12345678 <br><br>
+        <u>info@enchanteur.cl</u>
+      </address>
+      <p class="derechos-reservados">@ 2023 Enchanteur. Todos los derechos reservados</p>
+    </div>
+  </footer>
   <!-- JS de Bootstrap -->
   <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
