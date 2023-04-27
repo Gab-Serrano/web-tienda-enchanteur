@@ -18,17 +18,11 @@ header {
 }
 
 .logo{
-  width: 30%;
+  max-width: 200px;
 }
 
 @media (min-width: 768px) {
   .logo{
-    max-width: 40%;
-  }
-}
-
-@media (min-width: 990px) {
-  .logo{
-    max-width: 40%;
+    max-width: 25%;
   }
 }
