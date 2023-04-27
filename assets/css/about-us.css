@@ -1,0 +1,19 @@
+/* about us */
+.about-us{
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.img-about-us{
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+.p-about-us{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.btn-saber-mas{
+    width: 300px;
+}
