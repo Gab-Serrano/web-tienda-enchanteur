@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enchanteur - Tienda Online</title>
+  <!-- Reseteo de los parámetros CSS del navegador -->
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/normalize.css" />
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/nav/navbar.css">
+  <link rel="stylesheet" href="../assets/css/nav/offcanvasNavbar.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="col">
+    <div class="contact-bar container-fluid text-center py-1">
+      <div class="row align-items-center">
+        <div class="header-contact col">
+          <i class="icon-header bi bi-whatsapp"></i>
+          <a href="https://wa.me/56912345678" aria-label="Chatea por WhatsApp">(+569) 1234 5678</a>
+        </div>
+        <div class="header-contact col">
+          <i class="icon-header bi bi-envelope-at-fill"></i>
+          <a href="mailto:info@enchanteur.cl">
+            info@enchanteur.cl
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-center">
+      <!-- logo -->
+      <a class="logo" href="#">
+        <img src="../assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur" width="170">
+      </a>
+    </div>
+  </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- navbar -->
+    <div class="container-fluid px-lg-4">
+      <!-- toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <!-- nav-menu -->
+      <div class="nav-menu d-none d-lg-flex">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" aria-current="page" href="pages\login.html"><i
+                class="bs bi-suit-spade-fill"></i>
+              Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                class="bs bi-suit-club-fill"></i>Nosotros</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                class="bs bi-suit-diamond-fill"></i>Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                class="bs bi-suit-heart-fill"></i>Tutoriales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                class="bs bi-dice-5-fill"></i>Contactanos</a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav-shop -->
+      <div class="nav-shop me-1">
+        <ul class="nav-shop navbar-nav flex-row gap-3 gap-lg-0">
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" href="#"><i class="bs bi-search"></i>
+              <span class="d-none d-lg-flex">Buscar</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" href="#"><i class="bs bi-person-fill"></i>
+              <span class="d-none d-lg-flex">Iniciar sesión</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex gap-2" href="#"><i class="bs bi-cart-fill"></i>
+              <span class="d-none d-lg-flex">Carrito</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- offcanvasNavbar -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <!-- offcanvasNavbar - title -->
+      <div class="offcanvas-header py-2">
+        <a class="logo-offcanvas" href="../index.html">
+          <img src="../assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur" width="210">
+      </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <!-- offcanvasNavbar - body -->
+      <div class="offcanvas-body p-0">
+        <!-- offcanvasNavbar - menu-items -->
+        <div class="container-fluid p-0">
+          <div class="sidebar-banner d-flex align-items-center" id="login">
+            <a href="pages\login.html" class="login-link d-flex justify-content-between align-items-center">
+              <h5 class="m-0 p-0">Inicia sesión</h5>
+            </a>
+          </div>
+          <div class="sidebar-banner d-flex align-items-center" id="about-us">
+            <a href="#" class="d-flex">
+              <h5 class="m-0 p-0">Nosotros</h5>
+            </a>
+          </div>
+          <div class="sidebar-banner d-flex align-items-center" id="products">
+            <a href="#" class="d-flex">
+              <h5 class="m-0 p-0">Productos</h5>
+            </a>
+          </div>
+          <div class="sidebar-banner d-flex align-items-center" id="tutoriales">
+            <a href="#" class="d-flex">
+              <h5 class="m-0 p-0">Tutoriales</h5>
+            </a>
+          </div>
+          <div class="sidebar-banner d-flex align-items-center" id="contactanos">
+            <a href="#" class="d-flex">
+              <h5 class="m-0 p-0">Contáctanos</h5>
+            </a>
+          </div>
+        </div>
+        <!-- offcanvasNavbar suscribe -->
+        <div class="offcanvas-suscribe container-fluid py-4">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center my-4 px-5">No te pierdas ni un solo truco</h1>
+              <h6 class="text-center my-3 px-5">Suscríbete a nuestro boletín de magia</h6>
+              <p class="offcanvas-suscribe-desc text-center my-3 px-4">Recibe las últimas novedades, consejos y trucos
+                de los mejores magos del mundo en tu entrada</p>
+              <form class="d-flex flex-column align-items-center px-3">
+                <input type="email" class="form-control mb-2" id="sidebar-suscribe-input" aria-describedby="emailHelp"
+                  placeholder="Ingresa tu email">
+                <button type="submit" class="btn btn-primary mt-2" id="sidebar-suscribe-btn">Suscribirse</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- JS de Bootstrap -->
+  <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

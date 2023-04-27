@@ -1,8 +1,8 @@
 /* Font weight: 100;300;400;500 */
 
 .offcanvas-header{
-    background-color: var(--bg-color-secondary);
-    color: var(--text-color-secondary);
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-primary);
 }
 
 .offcanvas-header .btn-close{
