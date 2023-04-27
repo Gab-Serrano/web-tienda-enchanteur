@@ -12,7 +12,9 @@ Proyecto sitio web de la asignatura Programación Web DuocUC
 ## Descripción
 Proyecto de desarrollo web basado en HTML y CSS bajo el framework BootStrap.
 
+## Mock up
+Mock-up del proyecto disponible [aqui](https://www.figma.com/file/ESxtuOdkHs8DZT5si91oeh/Sitio-eCommerce?node-id=222%3A457&t=gT7KEhRRzxSrs63O-1)
+
 ## Versionado
 
 ### v 1.0
-* Importación de la 

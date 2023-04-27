@@ -1,0 +1,93 @@
+/* Font weight: 100;300;400;500 */
+
+.offcanvas-header{
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-primary);
+}
+
+.offcanvas-header .btn-close{
+    color: var(--text-color-primary);
+}
+
+.offcanvas-body .sidebar-banner{
+    padding: 3rem 1rem;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba(242,242,242,1) 25%, rgba(35,31,32,1) 100%);
+    border-image-slice: 1;
+}
+
+.offcanvas-body .sidebar-banner h5 {
+    color: var(--text-color-primary);
+    font-weight: 900;
+
+}
+
+.offcanvas-body #login{
+    background-image:linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%), url("../../img/sidebar-login.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.offcanvas-body #login.login-link {
+    color: var(--text-color-secondary);
+}
+
+.offcanvas-body a{
+    text-decoration: none;
+}
+
+.offcanvas-body #about-us{
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%), url("../../img/sidebar-about-us.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.offcanvas-body #products{
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%), url("../../img/sidebar-products.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.offcanvas-body #tutoriales{
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%), url("../../img/sidebar-tutoriales.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.offcanvas-body #contactanos{
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%), url("../../img/sidebar-contactanos.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.offcanvas-suscribe{
+    background-color: var(--bg-color-secondary);
+    color: var(--text-color-secondary);
+}
+
+.offcanvas-suscribe-desc{
+    font-weight: 300;
+}
+
+#sidebar-suscribe-input{
+    background-color: #ffffff;
+    color: var(--text-color-secondary);
+    border: 1px solid var(--text-color-primary);
+    border-radius: 1;
+}
+
+#sidebar-suscribe-input:active, #sidebar-suscribe-input:focus{
+    box-shadow: none;
+}
+
+#sidebar-suscribe-btn{
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-primary);
+    border: 1px solid var(--text-color-primary);
+    border-radius: 1;
+    width: 8rem;
+}
+
+
+
