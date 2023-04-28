@@ -9,6 +9,10 @@
     color: var(--text-color-primary);
 }
 
+.offcanvas-header .btn-close-white{
+    box-shadow: none;
+}
+
 .offcanvas-body .sidebar-banner{
     padding: 3rem 1rem;
     border-bottom: 1px solid transparent;

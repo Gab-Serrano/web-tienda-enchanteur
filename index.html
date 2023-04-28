@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
     <title>Enchanteur - Tienda Online</title>
     <!-- Reseteo de los parámetros CSS del navegador -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
@@ -33,11 +33,13 @@
     <link rel="stylesheet" href="../assets/css/footer.css">
     <!-- Tipografía -->
     <link rel="stylesheet" href="assets/css/typography/title.css">
+    <link rel="stylesheet" href="assets/css/typography/lead.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header class="col">
+    <header>
+        <!-- Contact-info -->
         <div class="contact-bar container-fluid text-center py-1 fixed-bottom">
             <div class="row align-items-center">
                 <div class="header-contact col">
@@ -53,12 +55,13 @@
             </div>
         </div>
         <!-- logo -->
-        <a class="logo container-fluid justify-content-center  d-flex py-3" href="#">
+        <a class="logo container-fluid justify-content-center  d-flex py-2" href="#">
             <img class="img-fluid" src="../assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur">
         </a>
     </header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar
+    navbar-expand-lg navbar-dark" id="navbar-top">
         <!-- navbar -->
         <div class="container-fluid px-lg-4">
             <!-- toggle -->
@@ -115,11 +118,12 @@
         <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
             <!-- offcanvasNavbar - header -->
-            <div class="offcanvas-header py-5">
+            <div class="offcanvas-header py-4">
                 <a class="logo-offcanvas" href="../index.html">
-                    <img src="../assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur" width="210">
+                    <img src="../assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur" width="150">
                 </a>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
             </div>
             <!-- offcanvasNavbar - body -->
             <div class="offcanvas-body p-0">
@@ -173,21 +177,31 @@
             </div>
         </div>
     </nav>
+    <!-- Hero -->
+    <section class="hero container-fluid text-start"> 
+        <div class="row align-items-center align-items-sm-end pb-5 h-100">
+            <div class="hero-content">
+                <h1 class="hero-title title-light">Descubre el arte de la magia</h1>
+                <h6 class="hero-lead lead-light">Encuentra el mazo perfecto para tus trucos y añade un toque de magia a
+                    tu vida.</h6>
+                <button class="hero-btn">Comprar ahora</button>
+            </div>
+        </div>
+    </section>
     <!-- About us-->
-    <section>
-        <div class="row text-center about-us">
-            <h1 class="titulo-nosotros">Nosotros</h1>
-        </div>
-        <div class="row img-about-us">
-            <img src="../assets/img/about-us-img.jpg" alt="">
-        </div>
-        <div class="row">
-            <p class="text-center p-about-us">
-                En nuestra tienda de mazoz de cartas y trucos de magia, nos apasiona ofrecer productos de alta calidad
-                para
-                magos de todos los niveles. ¡Descubre la magia con nosotros!
-            </p>
-            <button type="button" class="btn btn-dark mx-auto btn-saber-mas">Saber más</button>
+    <section class="about-us container-fluid text-center">
+        <div class="row align-items-center h-100">
+            <div class="about-us-content px-0">
+                <h1 class="title-dark">Nosotros</h1>
+                <div class="row img-about-us">
+                    <img class="img-fluid" src="../assets/img/about-us-img.jpg" alt="Imagen sobre nosotros">
+                </div>
+                <p class="text-center px-5">
+                        En nuestra tienda de mazoz de cartas y trucos de magia, nos apasiona ofrecer productos de alta calidad para magos de todos los niveles. <br> ¡Descubre la magia con nosotros!
+                    </p>
+                <button type="button" class="btn btn-dark mx-auto btn-saber-mas">Saber más
+                </button>
+            </div>
         </div>
     </section>
     <!-- Productos-->
@@ -248,6 +262,7 @@
     <!-- JS de Bootstrap -->
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

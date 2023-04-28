@@ -12,3 +12,7 @@
     /* Font family */
     font-family: 'roboto', sans-serif;
 }
+
+body{
+    background-color: var(--bg-color-primary);
+}
