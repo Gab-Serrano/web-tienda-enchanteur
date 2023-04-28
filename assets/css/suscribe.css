@@ -1,28 +1,203 @@
-/* placeholder de contactanos */
-#email-suscribe{
-    width: 300px;
-    text-align: center;
-    margin-left: 1rem;
-    padding: 10px;
+.suscribe {
+  height: 95vh;
+  background-color: var(--bg-color-secondary);
+  margin-bottom: 5rem;
+  min-height: 600px;
 }
 
-.btn-suscribe{
-    margin-left: 10px;
-    background-color: #d7dedc;
-    font-weight: bold;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: 1rem;
+.suscribe div{
+    align-content: space-evenly;
 }
 
-.contactanos{
-    padding-bottom: 3rem;
-    padding-top: 2rem;  
+.suscribe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.contactanos-fondo{
-    background-image: url(../img/tuto-2.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
+.suscribe-banner {
+  width: 100%;
+  min-height: 70vh;
+  background: url("../img/tuto-2.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.suscribe-banner h2,
+p {
+  padding: 0 3rem;
+}
+
+.suscribe-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.suscribe-text h2 {
+  font-size: 1.8rem;
+}
+
+.suscribe-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.form-suscribe {
+  width: 100%;
+  max-width: 300px;
+}
+
+.form-floating {
+  width: 100%;
+}
+
+#email-suscribe {
+  width: 100%;
+}
+
+.btn-suscribe {
+  width: 40%;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  background-color: var(--bg-color-secondary);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  color: var(--text-color-secondary);
+  margin-top: 1rem;
+  border-color: var(--bg-color-secondary);
+}
+
+@media screen and (min-width: 577px) {
+  .form-suscribe {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+
+    .suscribe-content {
+    gap: 1rem;
+  }
+
+  .suscribe-banner {
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+  }
+
+  .suscribe-text {
+    max-width: 500px;
+    gap: 1rem;
+  }
+
+  .suscribe-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .suscribe-text p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .form-suscribe {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .btn-suscribe {
+    width: 20%;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    max-width: 400px;
+    color: var(--text-color-secondary);
+    margin-top: 1rem;
+    border-color: var(--bg-color-secondary);
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .suscribe {
+    height: 95vh;
+    background-color: var(--bg-color-secondary);
+    margin-bottom: 5rem;
+    min-height: 600px;
+  }
+
+  .suscribe div{
+    align-content: space-evenly;
+  }
+
+  .suscribe-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: url("../img/tuto-2.jpg") no-repeat center center/cover;
+  }
+
+  .suscribe-banner {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    padding-right: 2rem;
+  }
+
+  .suscribe-banner h2,
+  p {
+    padding: 0 3rem;
+  }
+
+  .suscribe-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+  }
+
+  .suscribe-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .suscribe-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .form-suscribe {
+    width: 100%;
+  }
+
+  .form-floating {
+    width: 100%;
+  }
+
+  #email-suscribe {
+    width: 100%;
+  }
+
+  .btn-suscribe {
+    width: 40%;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    background-color: var(--bg-color-secondary);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    color: var(--text-color-secondary);
+    margin-top: 1rem;
+    border-color: var(--bg-color-secondary);
+  }
 }
