@@ -1,6 +1,7 @@
 .navbar {
     padding: 0.1rem 0 0.1rem 0;
     background-color: var(--bg-color-primary);
+    top: 20;
 }
 
 .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
