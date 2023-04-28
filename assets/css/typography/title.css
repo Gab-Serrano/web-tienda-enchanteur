@@ -7,3 +7,29 @@
     color: var(--text-color-accent);
     font-size: 2.5rem;
 }
+
+.title-responsive{
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  
+    .title-light, .title-dark {
+      font-size: 3rem;
+    }
+
+    .title-responsive{
+    }
+  
+    .hero-content h6 {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  
+    .hero-btn {
+      font-size: 1.2rem;
+    }
+
+
+  }
