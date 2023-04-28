@@ -1,6 +1,7 @@
 .hero {
     height: 80vh;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/hero-bg.jpg") no-repeat center center/cover;
+    margin-bottom: 5rem;
 }
 
 .hero-content{
