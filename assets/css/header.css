@@ -1,26 +1,28 @@
 header {
   background-color: var(--bg-color-primary);
+  padding: 1rem 0;
 }
 
 .contact-bar {
   font-size: 0.8rem;
   background-color: var(--bg-color-primary);
-  
 }
 
-.icon-header{
+.icon-header {
   color: var(--text-color-primary);
 }
 
-.header-contact a{
+.header-contact a {
   color: var(--text-color-primary);
   text-decoration: none;
 }
 
-.logo{
-  padding: 2rem;
+.logo {
+  max-width: 200px;
 }
 
-.logo img{
-  width: 18rem;
+@media (min-width: 768px) {
+  .logo {
+    max-width: 25%;
+  }
 }
