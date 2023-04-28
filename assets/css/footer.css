@@ -7,7 +7,7 @@
 }
 
 footer{
-    background-color: #231f20;
+    background-color: var(--bg-color-primary);
 }
 
 .derechos-reservados{
