@@ -1,48 +1,48 @@
-/* about us */
-.about-us{
-    height: 100vh;
-    background-color: var(--bg-color-secondary);
-    margin-bottom: 5rem;
-    padding-bottom: 2rem;
-    min-height: 500px;
+.about-us {
+  height: 100vh;
+  background-color: var(--bg-color-secondary);
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  min-height: 600px;
 }
 
-.about-us-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+.about-us div {
+  align-content: space-evenly;
 }
 
-.img-about-us{
-    width: 100%;
-    max-width: 1000px;
-    min-height: 35vh;
-    background: url("../img/about-us-img.jpg") no-repeat center center/cover;
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.about-us-content p{
-    max-width: 600px;
+.img-about-us {
+  width: 100%;
+  min-height: 35vh;
+  background: url("../img/about-us-img.jpg") no-repeat center center/cover;
 }
 
-.btn-saber-mas{
-    width: 70%;
-    height: 3rem;
-    font-size: 1.2rem;
-    background-color: var(--bg-color-primary);
-    border-radius: 2px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    max-width: 400px;
+.about-us-content p {
+  max-width: 600px;
+}
+
+.btn-saber-mas {
+  width: 70%;
+  height: 3rem;
+  font-size: 1.2rem;
+  background-color: var(--bg-color-primary);
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
 }
 
 @media screen and (min-width: 768px) {
+  .about-us-content {
+    gap: 2rem;
+  }
 
-    .about-us-content{
-        gap: 2rem;
-    }
-
-    .img-about-us{
-        min-height: 50vh;
-    }
+  .img-about-us {
+    min-height: 50vh;
+  }
 }
-
