@@ -1,12 +1,18 @@
 .suscribe {
-  height: 95vh;
   background-color: var(--bg-color-secondary);
   margin-bottom: 5rem;
-  min-height: 500px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  justify-items: end;
+  justify-content: space-evenly;
+  padding: 3rem;
 }
 
-.suscribe div{
-    align-content: space-evenly;
+.suscribe .div {
+  justify-items: center;
+  justify-content: space-evenly;
 }
 
 .suscribe-content {
@@ -18,7 +24,7 @@
 
 .suscribe-banner {
   width: 100%;
-  min-height: 300px;
+  min-height: 400px;
   background: url("../img/tuto-2.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
@@ -82,16 +88,18 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  
+  .suscribe {
+    min-height: 700px;
+  }
 
-    .suscribe-content {
+  .suscribe-content {
     gap: 1rem;
   }
 
   .suscribe-banner {
     flex-direction: column;
     align-items: center;
-    min-height: 60vh;
+    max-height: 100px;
   }
 
   .suscribe-text {
@@ -126,13 +134,12 @@ p {
 
 @media screen and (min-width: 1080px) {
   .suscribe {
-    height: 95vh;
     background-color: var(--bg-color-secondary);
     margin-bottom: 5rem;
-    min-height: 600px;
+    min-height: 800px;
   }
 
-  .suscribe div{
+  .suscribe div {
     align-content: space-evenly;
   }
 
@@ -146,7 +153,7 @@ p {
 
   .suscribe-banner {
     width: 100%;
-    min-height: 70vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
