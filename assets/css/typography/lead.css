@@ -1,11 +1,11 @@
 .lead-dark{
     color: var(--text-color-secondary);
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .lead-light{
     color: var(--text-color-accent);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
