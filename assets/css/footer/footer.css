@@ -2,6 +2,7 @@
 
 footer .container-fluid {
   min-height: 35vh;
+  background-color: var(--bg-color-primary);
 }
 
 footer .footer-title {

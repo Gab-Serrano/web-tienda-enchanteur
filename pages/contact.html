@@ -43,7 +43,7 @@
     <!-- Suscribe -->
     <link rel="stylesheet" href="../assets/css/suscribe.css">
     <!-- Footer -->
-    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/footer/footer.css">
     <!-- Tipografía -->
     <link rel="stylesheet" href="../assets/css/typography/title.css">
     <link rel="stylesheet" href="../assets/css/typography/lead.css">
@@ -70,7 +70,7 @@
             </div>
         </div>
         <!-- logo -->
-        <a class="logo container-fluid justify-content-center  d-flex py-2" href="#">
+        <a class="logo container-fluid justify-content-center  d-flex py-2" href="../index.html">
             <img class="img-fluid" src="../assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur">
         </a>
     </header>
@@ -88,7 +88,7 @@
             <div class="nav-menu d-none d-lg-flex">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" aria-current="page" href="pages\login.html"><i
+                        <a class="nav-link d-flex gap-2" aria-current="page" href="../index.html"><i
                                 class="bs bi-suit-spade-fill"></i>
                             Inicio</a>
                     </li>
@@ -106,7 +106,7 @@
                                 class="bs bi-suit-heart-fill"></i>Tutoriales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                        <a class="nav-link d-flex gap-2" aria-current="page" href="contact.html"><i
                                 class="bs bi-dice-5-fill"></i>Contactanos</a>
                     </li>
                 </ul>
@@ -119,7 +119,7 @@
                             <span class="d-none d-lg-flex">Buscar</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-none d-lg-flex gap-2" href="#"><i class="bs bi-person-fill"></i>
+                        <a class="nav-link d-none d-lg-flex gap-2" href="login.html"><i class="bs bi-person-fill"></i>
                             <span class="d-none d-lg-flex">Iniciar sesión</span></a>
                     </li>
                     <li class="nav-item">
@@ -165,7 +165,7 @@
                         </a>
                     </div>
                     <div class="sidebar-banner d-flex align-items-center" id="contactanos">
-                        <a href="#" class="d-flex">
+                        <a href="contact.html" class="d-flex">
                             <h5 class="m-0 p-0">Contáctanos</h5>
                         </a>
                     </div>
@@ -259,41 +259,72 @@
         </div>
     </div>
     <footer>
-        <div class="row container-fluid text-white text-center">
-            <img class="Enchanteur-img-footer row img-fluid col-md-6 mx-auto" src="assets/img/echanteur min.png" alt="">
-            <h5>Siguenos en redes:</h5> <br><br><br>
-            <div class="row  iconos-footer  ">
-                <div class="border rounded p-3 d-inline-block col-3">
-                    <i class="bi bi-facebook   text-dark"></i>
+        <div class="container-fluid pb-5">
+            <!-- Logo -->
+            <div class="navbar-brand logo-footer d-flex justify-content-center mb-5">
+                <img class="img-fluid" src="../assets/img/enchanteur-full-logo.png" alt="Logo" width="300">
+            </div>
+            <!-- footer content -->
+            <div class="footer-content container-fluid text-center">
+                <!-- nav-menu -->
+                <div class="nav-menu-footer d-none d-lg-flex justify-content-center col">
+                    <div>
+                        <h1 class="footer-title text-start">Menú</h1>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex gap-2" aria-current="page" href="../index.html"><i
+                                        class="bs bi-suit-spade-fill"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                                        class="bs bi-suit-club-fill"></i>Nosotros</a>
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                                        class="bs bi-suit-diamond-fill"></i>Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex gap-2" aria-current="page" href="#"><i
+                                        class="bs bi-suit-heart-fill"></i>Tutoriales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex gap-2" aria-current="page" href="contact.html"><i
+                                        class="bs bi-dice-5-fill"></i>Contactanos</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="border rounded p-3 d-inline-block col-3">
-                    <i class="bi bi-twitter    text-dark"></i>
+                <!-- info y redes -->
+                <div class="footer-info d-lg-flex col">
+                    <div class="rss">
+                        <h1 class="footer-title text-center text-lg-start">Síguenos en nuestras redes</h1>
+                        <div class="footer-rss d-flex justify-content-evenly">
+                            <a href="#"><i class="bs bi-facebook"></i></a>
+                            <a href="#"><i class="bs bi-instagram"></i></a>
+                            <a href="#"><i class="bs bi-twitter"></i></a>
+                            <a href="#"><i class="bs bi-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="border rounded p-3 d-inline-block col-3">
-                    <i class="bi bi-instagram  text-dark"></i>
-                </div>
-                <div class="border rounded p-3 d-inline-block col-3">
-                    <i class="bi bi-tiktok     text-dark"></i>
+                <div class="info">
+                    <h1 class="footer-title text-center">Encuéntranos en</h1>
+                    <p>Calle de los Magos 123, Valparaíso, Chile.
+                    <br>
+                    (+569) 1234 5678
+                    <br>
+                    info@enchanteur.cl
+                    </p>
                 </div>
             </div>
-            <br><br><br>
-            <h5>Encuentranos en:</h5>
-            <br><br>
-            <address>
-                Calle de los Magos 123, <br>
-                valparaíso, Chile. <br><br>
-                +56 9 12345678 <br><br>
-                <u>info@enchanteur.cl</u>
-            </address>
-            <p class="derechos-reservados">@ 2023 Enchanteur. Todos los derechos reservados</p>
+            
         </div>
     </footer>
     <!-- JS de Bootstrap -->
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
 </body>
-
 </html>
