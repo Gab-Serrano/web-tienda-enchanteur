@@ -2,12 +2,12 @@
  .Enchanteur-img-footer{
     margin: 2rem;
     border: 2rem;
-    padding: 2rem;
+    padding: 1rem;
     content: 2rem;
 }
 
 footer{
-    background-color: #231f20;
+    background-color: var(--bg-color-primary);
 }
 
 .derechos-reservados{

@@ -1,12 +1,18 @@
 .suscribe {
-  height: 95vh;
   background-color: var(--bg-color-secondary);
   margin-bottom: 5rem;
   min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  justify-items: end;
+  justify-content: space-evenly;
+  padding: 3rem;
 }
 
-.suscribe div{
-    align-content: space-evenly;
+.suscribe .div {
+  justify-items: center;
+  justify-content: space-evenly;
 }
 
 .suscribe-content {
@@ -18,8 +24,9 @@
 
 .suscribe-banner {
   width: 100%;
-  min-height: 70vh;
-  background: url("../img/tuto-2.jpg") no-repeat center center/cover;
+  min-height: 400px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/bg-suscribe.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,9 +34,8 @@
   align-items: center;
 }
 
-.suscribe-banner h2,
-p {
-  padding: 0 3rem;
+.suscribe-text > .title, .suscribe-text > .desc {
+  padding: 0 1rem;
 }
 
 .suscribe-text {
@@ -62,8 +68,8 @@ p {
 }
 
 .btn-suscribe {
-  width: 40%;
-  height: 3.5rem;
+  width: 50%;
+  height: 3rem;
   font-size: 1.2rem;
   background-color: var(--bg-color-secondary);
   border-radius: 5px;
@@ -82,16 +88,18 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  
+  .suscribe {
+    min-height: 700px;
+  }
 
-    .suscribe-content {
+  .suscribe-content {
     gap: 1rem;
   }
 
   .suscribe-banner {
     flex-direction: column;
     align-items: center;
-    min-height: 60vh;
+    max-height: 100px;
   }
 
   .suscribe-text {
@@ -126,13 +134,12 @@ p {
 
 @media screen and (min-width: 1080px) {
   .suscribe {
-    height: 95vh;
     background-color: var(--bg-color-secondary);
     margin-bottom: 5rem;
-    min-height: 600px;
+    min-height: 800px;
   }
 
-  .suscribe div{
+  .suscribe div {
     align-content: space-evenly;
   }
 
@@ -141,22 +148,21 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    background: url("../img/tuto-2.jpg") no-repeat center center/cover;
   }
 
   .suscribe-banner {
-    width: 100%;
-    min-height: 70vh;
+    width: 90%;
+    min-height: 60vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
     align-items: center;
     padding-right: 2rem;
   }
 
-  .suscribe-banner h2,
-  p {
+  .suscribe-banner h2, 
+  .suscribe-banner p {
     padding: 0 3rem;
   }
 
