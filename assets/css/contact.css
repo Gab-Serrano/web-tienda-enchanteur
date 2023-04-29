@@ -1,0 +1,11 @@
+body{
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-primary);
+    padding: 4rem;
+}
+input{
+    width: 80%;
+}
+textarea{
+    width: 80%;
+}
