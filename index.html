@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="assets/API/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +30,19 @@
     <link rel="stylesheet" href="../assets/css/nav/offcanvasNavbar.css">
     <!-- hero -->
     <link rel="stylesheet" href="assets/css/hero.css">
+    <!-- About us -->
     <link rel="stylesheet" href="../assets/css/about-us.css">
+    <!-- Products -->
+    <link rel="stylesheet" href="assets/css/products/products.css">
+    <link rel="stylesheet" href="assets/css/products/products-card.css">
+    <link rel="stylesheet" href="assets/css/products/products-carousel.css">
+    <!-- tutorials -->
+    <link rel="stylesheet" href="assets/css/tutorials/tutorials.css">
+    <link rel="stylesheet" href="assets/css/tutorials/tutorials-card.css">
+    <link rel="stylesheet" href="assets/css/tutorials/tutorials-carousel.css">
+    <!-- Suscribe -->
     <link rel="stylesheet" href="./assets/css/suscribe.css">
+    <!-- Footer -->
     <link rel="stylesheet" href="../assets/css/footer.css">
     <!-- Tipografía -->
     <link rel="stylesheet" href="assets/css/typography/title.css">
@@ -190,41 +203,173 @@
     </section>
     <!-- About us-->
     <section class="about-us container-fluid text-center px-0">
-        <div class="row align-items-center h-100">
-            <h1 class="title-dark title-responsive">Acerca de nosotros</h1>
-            <div class="about-us-content px-0">
-                
-                <div class="img-about-us">
-                </div>
-                <p class="text-center px-4 lead-dark">
-                    En nuestra tienda de mazos de cartas y trucos de magia, nos apasiona ofrecer productos de alta
-                    calidad para magos de todos los niveles. <br> ¡Descubre la magia con nosotros!
-                </p>
-                <button type="button" class="btn btn-dark mx-auto btn-saber-mas">Saber más
-                </button>
+        <h1 class="title-dark title-responsive">Acerca de nosotros</h1>
+        <div class="about-us-content px-0">
+            <div class="img-about-us">
             </div>
+            <p class="text-center px-4 lead-dark">
+                En nuestra tienda de mazos de cartas y trucos de magia, nos apasiona ofrecer productos de alta
+                calidad para magos de todos los niveles. <br> ¡Descubre la magia con nosotros!
+            </p>
+            <button type="button" class="btn btn-dark mx-auto btn-saber-mas">Saber más
+            </button>
         </div>
     </section>
     <!-- Productos-->
+    <section class="products container-fluid text-center">
+        <h1 class="title-dark title-responsive">Productos Seleccionados</h1>
+        <!-- Selección para movil -->
+        <div class="products-content container-fluid d-md-none">
+            <a href="#" class="card text-bg-dark">
+                <img src="assets/img/prod-1.jpg" alt="Producto seleccionado 1" class="card-img">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Baraja Citizens</h5>
+                    <p class="card-text card-desc">Baraja de cartas</p>
+                    <p class="card-text precio">$40.990</p>
+                </div>
+            </a>
+            <a href="#" class="card text-bg-dark">
+                <img src="assets/img/prod-2.jpg" alt="Producto seleccionado 2" class="card-img img-fluid">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Baraja Monarchs</h5>
+                    <p class="card-text card-desc">Baraja de cartas premium</p>
+                    <p class="card-text precio">$62.990</p>
+                </div>
+            </a>
+            <a href="#" class="card text-bg-dark">
+                <img src="assets/img/prod-3.jpg" alt="Producto seleccionado 3" class="card-img">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Baraja de cartas Hudson</h5>
+                    <p class="card-text card-desc">Baraja de magia</p>
+                    <p class="card-text precio precio-tachado
+                    ">$40.990</p>
+                    <p class="card-text precio oferta">$35.990</p>
+                </div>
+            </a>
+        </div>
+        <!-- Despliegue de carousel -->
+        <div id="carouselProducts" class="owl-carousel owl-theme d-none d-md-flex">
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/prod-1.jpg" alt="Producto seleccionado 1" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Baraja Citizens</h5>
+                        <p class="card-text card-desc">Baraja de cartas</p>
+                        <p class="card-text precio">$40.990</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/prod-2.jpg" alt="Producto seleccionado 2" class="card-img img-fluid">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Baraja Monarchs</h5>
+                        <p class="card-text card-desc">Baraja de cartas premium</p>
+                        <p class="card-text precio">$62.990</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/prod-3.jpg" alt="Producto seleccionado 3" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Baraja de cartas Hudson</h5>
+                        <p class="card-text card-desc">Baraja de magia</p>
+                        <p class="card-text precio precio-tachado
+                            ">$40.990</p>
+                        <p class="card-text precio oferta">$35.990</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="btn btn-dark mx-auto btn-saber-mas">Ver todos</button>
+    </section>
     <!-- Tutoriales-->
+    <section class="tutorials container-fluid text-center">
+        <h1 class="title-dark title-responsive">Tutoriales</h1>
+        <!-- Selección para movil -->
+        <div class="tutorials-content container-fluid d-md-none">
+            <a href="#" class="card text-bg-dark">
+                <img src="assets/img/tuto-1.jpg" alt="Tutorial 1" class="card-img img-fluid">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">La Carta Ambiciosa</h5>
+                    <p class="card-text">Descubre cómo hacer que una carta suba a la cima del mazo una y otra vez</p>
+                    <button type="button" class="btn btn-secondary btn-info">+ Info</button>
+                </div>
+            </a>
+            <a href="#" class="card text-bg-dark">
+                <img src="assets/img/tuto-2.jpg" alt="Tutorial 2" class="card-img img-fluid">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">El Abanico de Cartas</h5>
+                    <p class="card-text">Descubre cómo hacer un abanico impresionante con tus cartas, perfecto para abrir cualquier acto de magia</p>
+                    <button type="button" class="btn btn-secondary btn-info">+ Info</button>
+                </div>
+            </a>
+            <a href="#" class="card text-bg-dark">
+                <img src="assets/img/tuto-3.jpg" alt="Tutorial 3" class="card-img img-fluid">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">La Carta Viajera</h5>
+                    <p class="card-text">Aprende cómo hacer que una carta salte mágicamente de un mazo a otro.</p>
+                    <button type="button" class="btn btn-secondary btn-info">+ Info</button>
+                </div>
+            </a>
+        </div>
+        <!-- Despliegue de carousel -->
+        <div id="carouselTutorials" class="owl-carousel owl-theme d-none d-md-flex">
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/tuto-1.jpg" alt="Tutorial 1" class="card-img img-fluid">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">La Carta Ambiciosa</h5>
+                        <p class="card-text">Descubre cómo hacer que una carta suba a la cima del mazo una y otra vez</p>
+                        <button type="button" class="btn btn-secondary btn-info">+ Info</button>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/tuto-2.jpg" alt="Producto seleccionado 2" class="card-img img-fluid">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">El Abanico de Cartas</h5>
+                        <p class="card-text">Descubre cómo hacer un abanico impresionante con tus cartas, perfecto para abrir cualquier acto de magia</p>
+                        <button type="button" class="btn btn-secondary btn-info">+ Info</button>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/tuto-3.jpg" alt="Producto seleccionado 3" class="card-img img-fluid">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">La Carta Viajera</h5>
+                        <p class="card-text">Aprende cómo hacer que una carta salte mágicamente de un mazo a otro.</p>
+                        <button type="button" class="btn btn-secondary btn-info">+ Info</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="btn btn-dark mx-auto btn-saber-mas">Ver todos</button>
+    </section>
     <!-- Suscribe  -->
     <section class="suscribe container-fluid text-center px-0">
-        <div class="row align-items-center h-100 ">
-            <h1 class="title-dark title-responsive p-0 m-0 ">No te pierdas ni un truco</h1>
+        <h1 class="title-dark title-responsive">No te pierdas ni un truco</h1>
+        <div class="container-fluid px-0">
             <div class="suscribe-content text-center">
                 <div class="suscribe-banner">
                     <div class="suscribe-text">
-                        <h2 class="text-white"> Suscríbete a nuestro boletín de magia
+                        <h2 class="title text-white"> Suscríbete a nuestro boletín de magia
                         </h2>
-                        <p class="text-white">Recibe las últimas novedades, consejos y trucos de los mejores magos del mundo en tu entrada</p>
-                    </div>               
-                    <form class="form-suscribe d-flex align-items-center flex-column flex-sm-row justify-content-sm-center gap-sm-3 " action="">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" aria-describedby="emailHelp" name="email"
-                                    id="email-suscribe" placeholder="nombre@ejemplo.com">
-                                <label for="floatingInput">Correo electrónico</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-suscribe m-sm-0">Suscribirse</button>
+                        <p class="desc text-white">Recibe las últimas novedades, consejos y trucos de los mejores magos del
+                            mundo en tu entrada</p>
+                    </div>
+                    <form
+                        class="form-suscribe d-flex align-items-center flex-column flex-sm-row justify-content-sm-center gap-sm-3 "
+                        action="">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" aria-describedby="emailHelp" name="email"
+                                id="email-suscribe" placeholder="nombre@ejemplo.com">
+                            <label for="floatingInput">Correo electrónico</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-suscribe m-sm-0">Suscribirse</button>
                     </form>
                 </div>
             </div>
@@ -264,6 +409,8 @@
     <!-- JS de Bootstrap -->
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
 
