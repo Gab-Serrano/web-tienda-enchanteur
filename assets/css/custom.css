@@ -16,3 +16,8 @@
 body{
     background-color: var(--bg-color-primary);
 }
+
+.nav-link:hover{
+    color: var(--text-color-primary);
+    text-decoration: underline;
+}
