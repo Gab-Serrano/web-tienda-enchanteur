@@ -25,7 +25,8 @@
 .suscribe-banner {
   width: 100%;
   min-height: 400px;
-  background: url("../img/tuto-2.jpg") no-repeat center center/cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/bg-suscribe.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,9 +34,8 @@
   align-items: center;
 }
 
-.suscribe-banner h2,
-p {
-  padding: 0 3rem;
+.suscribe-text > .title, .suscribe-text > .desc {
+  padding: 0 1rem;
 }
 
 .suscribe-text {
@@ -148,11 +148,10 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    background: url("../img/tuto-2.jpg") no-repeat center center/cover;
   }
 
   .suscribe-banner {
-    width: 100%;
+    width: 90%;
     min-height: 40vh;
     display: flex;
     flex-direction: row;
@@ -162,8 +161,8 @@ p {
     padding-right: 2rem;
   }
 
-  .suscribe-banner h2,
-  p {
+  .suscribe-banner h2, 
+  .suscribe-banner p {
     padding: 0 3rem;
   }
 

@@ -1,15 +1,15 @@
-.card {
+.products .card {
     border-radius: 0px;
     border: none;
-    box-shadow: 0px 4px 4px rgba(206, 134, 134, 0.25);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.card img {
+.products .card img {
     border-radius: 0px;
     max-width: 447px;
 }
 
-.card-img-overlay{
+.products .card-img-overlay{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0 0 2rem 1rem;
     display: flex;
@@ -20,29 +20,33 @@
     text-align: initial;
 }
 
-.card-img-overlay:hover{
+.products .card-img-overlay:hover{
     background-color: transparent;
     transition: background-color 0.5s ease-in-out;
 }
 
-.card .card-img-overlay .card-title, .card-text{
+.products .card .card-img-overlay .card-title .card-text{
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.card-title{
+.products .card-title{
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--text-color-primary);
 }
 
-.precio {
+.products .card-desc{
+    margin-bottom: 0.5rem;
+}
+
+.products .precio {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--text-color-primary);
 }
 
-.precio-tachado{
+.products .precio-tachado{
     text-decoration: line-through;
     color: var(--text-color-primary);
     font-weight: 200;
