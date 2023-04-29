@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="assets/API/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,8 +33,10 @@
     <!-- About us -->
     <link rel="stylesheet" href="../assets/css/about-us.css">
     <!-- Products -->
-    <link rel="stylesheet" href="assets/css/products.css">
-    <!-- Ssuscribe -->
+    <link rel="stylesheet" href="assets/css/products/products-movile.css">
+    <link rel="stylesheet" href="assets/css/products/products-card.css">
+    <link rel="stylesheet" href="assets/css/products/products-carousel.css">
+    <!-- Suscribe -->
     <link rel="stylesheet" href="./assets/css/suscribe.css">
     <!-- Footer -->
     <link rel="stylesheet" href="../assets/css/footer.css">
@@ -211,27 +215,27 @@
         </div>
     </section>
     <!-- Productos-->
-    <!-- Selección para movil -->
     <section class="products-movile container-fluid text-center">
         <h1 class="title-dark title-responsive">Productos Seleccionados</h1>
-        <div class="products-movile-content container-fluid">
-            <div class="card text-bg-dark">
+        <!-- Selección para movil -->
+        <div class="products-movile-content container-fluid d-md-none">
+            <a href="#" class="card text-bg-dark">
                 <img src="assets/img/prod-1.jpg" alt="Producto seleccionado 1" class="card-img">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Baraja Citizens</h5>
                     <p class="card-text">Baraja de cartas</p>
                     <p class="card-text precio">$40.990</p>
                 </div>
-            </div>
-            <div class="card text-bg-dark">
-                <img src="assets/img/prod-2.jpg" alt="Producto seleccionado 2" class="card-img">
+            </a>
+            <a href="#" class="card text-bg-dark">
+                <img src="assets/img/prod-2.jpg" alt="Producto seleccionado 2" class="card-img img-fluid">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Baraja Monarchs</h5>
                     <p class="card-text">Baraja de cartas premium</p>
                     <p class="card-text precio">$62.990</p>
                 </div>
-            </div>
-            <div class="card text-bg-dark">
+            </a>
+            <a href="#" class="card text-bg-dark">
                 <img src="assets/img/prod-3.jpg" alt="Producto seleccionado 3" class="card-img">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Baraja de cartas Hudson</h5>
@@ -240,6 +244,41 @@
                     ">$40.990</p>
                     <p class="card-text precio oferta">$35.990</p>
                 </div>
+            </a>
+        </div>
+        <!-- Despliegue de carousel -->
+        <div id="carouselProducts" class="owl-carousel owl-theme d-none d-md-flex">
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/prod-1.jpg" alt="Producto seleccionado 1" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Baraja Citizens</h5>
+                        <p class="card-text">Baraja de cartas</p>
+                        <p class="card-text precio">$40.990</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/prod-2.jpg" alt="Producto seleccionado 2" class="card-img img-fluid">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Baraja Monarchs</h5>
+                        <p class="card-text">Baraja de cartas premium</p>
+                        <p class="card-text precio">$62.990</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="card text-bg-dark">
+                    <img src="assets/img/prod-3.jpg" alt="Producto seleccionado 3" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Baraja de cartas Hudson</h5>
+                        <p class="card-text">Baraja de magia</p>
+                        <p class="card-text precio precio-tachado
+                            ">$40.990</p>
+                        <p class="card-text precio oferta">$35.990</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -304,7 +343,8 @@
     <!-- JS de Bootstrap -->
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
-
 </html>

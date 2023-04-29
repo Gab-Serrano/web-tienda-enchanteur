@@ -1,0 +1,18 @@
+.products-movile {
+  min-height: 600px;
+  background-color: var(--bg-color-secondary);
+  margin-bottom: 5rem;
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.products-movile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
