@@ -1,5 +1,5 @@
 .products {
-  min-height: 600px;
+  min-height: 700px;
   background-color: var(--bg-color-secondary);
   margin-bottom: 5rem;
   padding: 3rem 0rem;
@@ -18,7 +18,7 @@
 }
 
 .owl-stage-outer{
-  height: 50vh;
+  max-height: 70vh;
 }
 
 @media screen and (min-width: 768px) {
