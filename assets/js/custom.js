@@ -1,4 +1,3 @@
-jQuery(document).ready(function($) {
 $('.owl-carousel').owlCarousel({
   loop:true,
   margin:10,
@@ -18,7 +17,6 @@ $('.owl-carousel').owlCarousel({
       }
   }
 })
-});
 
 document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener('scroll', function() {
