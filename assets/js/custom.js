@@ -1,3 +1,9 @@
+if($.isFunction('owlCarousel')){
+  $("#owl-demo").owlCarousel({
+    navigation : true
+  });
+}
+
 $('.owl-carousel').owlCarousel({
   loop:true,
   margin:10,
