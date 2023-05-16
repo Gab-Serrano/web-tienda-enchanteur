@@ -1,0 +1,100 @@
+.products {
+  min-height: 700px;
+  background-color: var(--bg-color-secondary);
+  margin-bottom: 5rem;
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.products-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.owl-stage-outer{
+  max-height: 70vh;
+}
+
+@media screen and (min-width: 768px) {
+    .products {
+        min-height: 600px;
+        background-color: var(--bg-color-secondary);
+        margin-bottom: 5rem;
+        padding: 3rem 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+    
+    .products-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+    
+    .btn-info{
+      width: 45%;
+      background-color: var(--bg-color-secondary);
+      border-color: var(--bg-color-secondary);
+    }
+    
+    .btn-info:hover{
+      background-color: var(--bg-color-secondary);
+      border-color: var(--bg-color-secondary);
+    }
+}
+
+.products .owl-item{
+  display: flex;
+  justify-content: center;
+}
+
+.products .owl-stage-outer{
+  max-height: 400px;
+}
+
+@media screen and (min-width: 992px) {
+    .products {
+        min-height: 600px;
+        background-color: var(--bg-color-secondary);
+        margin-bottom: 5rem;
+        padding: 3rem 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+    
+    .products-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+    
+    .btn-info{
+      width: 45%;
+      background-color: var(--bg-color-secondary);
+      border-color: var(--bg-color-secondary);
+    }
+    
+    .btn-info:hover{
+      background-color: var(--bg-color-secondary);
+      border-color: var(--bg-color-secondary);
+    }
+
+    .products .owl-stage-outer{
+      max-height: 500px;
+  }
+}
+
