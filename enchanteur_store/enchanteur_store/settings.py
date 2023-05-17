@@ -12,10 +12,18 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+DEBUG = env('DEBUG')
+SECRET_KEY = env('SECRET_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -24,9 +32,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-uawa0b6nohd$!qhtho&3n)e2($l!l=y(g%=l0r)lqe5b@c$&5k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+""" DEBUG = True """
 
-ALLOWED_HOSTS = ['.vercel.app']
+if DEBUG:
+    ALLOWED_HOSTS = [".localhost", "127.0.0.1", "[::1]"]
+else:
+    ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -70,8 +81,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'enchanteur_store.wsgi.application'
-
+""" WSGI_APPLICATION = 'enchanteur_store.wsgi.application' """
+if env('NAME') == 'dev':
+    WSGI_APPLICATION = 'yourapp.wsgi.app'
+else:
+    WSGI_APPLICATION = 'yourapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -121,8 +135,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    'static'
+    os.path.join(BASE_DIR, 'static'),
 ]
+
+STATIC_ROOT = os.path.join(
+    BASE_DIR, 'staticfiles', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
