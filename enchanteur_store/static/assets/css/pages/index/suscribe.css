@@ -26,7 +26,7 @@
   width: 100%;
   min-height: 400px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../img/bg-suscribe.jpg") no-repeat center center/cover;
+    url("../../../img/bg-suscribe.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
