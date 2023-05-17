@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
     <title>Enchanteur - Tienda Online</title>
     <!-- Reseteo de los parámetros CSS del navegador -->
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/normalize.css' %}" />
     <!-- Íconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}"/>
     <!-- Owl carousel -->
-    <link rel="stylesheet" href="assets/API/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="{% static 'assets/API/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css' %}">
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,30 +23,30 @@
     <!-- custom -->
     <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
     <!-- header -->
-    <link rel="stylesheet" href="{%static 'assets/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/header.css' %}">
     <!-- navbar -->
-    <link rel="stylesheet" href="assets/css/nav/navbar.css">
+    <link rel="stylesheet" href="{% static 'assets/css/nav/navbar.css' %}">
     <!-- sidebar -->
-    <link rel="stylesheet" href="assets/css/nav/offcanvasNavbar.css">
+    <link rel="stylesheet" href="{% static 'assets/css/nav/offcanvasNavbar.css' %}">
     <!-- hero -->
-    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="{% static 'assets/css/hero.css' %}">
     <!-- About us -->
-    <link rel="stylesheet" href="assets/css/about-us.css">
+    <link rel="stylesheet" href="{% static 'assets/css/about-us.css' %}">
     <!-- Products -->
-    <link rel="stylesheet" href="assets/css/products/products.css">
-    <link rel="stylesheet" href="assets/css/products/products-card.css">
-    <link rel="stylesheet" href="assets/css/products/products-carousel.css">
+    <link rel="stylesheet" href="{% static 'assets/css/products/products.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/products/products-card.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/products/products-carousel.css' %}">
     <!-- tutorials -->
-    <link rel="stylesheet" href="assets/css/tutorials/tutorials.css">
-    <link rel="stylesheet" href="assets/css/tutorials/tutorials-card.css">
-    <link rel="stylesheet" href="assets/css/tutorials/tutorials-carousel.css">
+    <link rel="stylesheet" href="{% static 'assets/css/tutorials/tutorials.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tutorials/tutorials-card.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tutorials/tutorials-carousel.css' %}">
     <!-- Suscribe -->
-    <link rel="stylesheet" href="assets/css/suscribe.css">
+    <link rel="stylesheet" href="{% static 'assets/css/suscribe.css' %}">
     <!-- Footer -->
-    <link rel="stylesheet" href="assets/css/footer/footer.css">
+    <link rel="stylesheet" href="{% static 'assets/css/footer/footer.css' %}">
     <!-- Tipografía -->
-    <link rel="stylesheet" href="assets/css/typography/title.css">
-    <link rel="stylesheet" href="assets/css/typography/lead.css">
+    <link rel="stylesheet" href="{% static 'assets/css/typography/title.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/typography/lead.css' %}">
 </head>
 
 <body>
@@ -69,7 +69,7 @@
         </div>
         <!-- logo -->
         <a class="logo container-fluid justify-content-center  d-flex py-2" href="#">
-            <img class="img-fluid" src="assets/img/enchanteur-full-logo.png" alt="Logo de Enchanteur">
+            <img class="img-fluid" src="{% static 'assets/img/enchanteur-full-logo.png' %}" alt="Logo de Enchanteur">
         </a>
     </header>
     <!-- Navbar -->
@@ -440,10 +440,10 @@
     </footer>
     <!-- JS de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{% static 'node_modules/@popperjs/core/dist/umd/popper.min.js'%}"></script>
-    <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js'%}"></script>
-    <script src="assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'node_modules/@popperjs/core/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
 </body>
 
 </html>
