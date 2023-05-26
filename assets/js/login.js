@@ -29,12 +29,16 @@ function validarContrasena() {
 }
 */
 function validarContrasena() {
+   alert("validarContrasena")
    var pass = document.getElementsById("Contraseña").value;
+   alert("pass");
    var repass = document.getElementsById
       ("ConfirmaContraseña").value;
-
+   alert("repass");
    if (pass.length >= 8 || repass.length >= 8) {
-      if (pass == repass) {       
+      alert("if 1")
+      if (pass == repass) { 
+         alert("if 2")      
          return true;
       } else {
          alert('Las contraseñas no son iguales.');
@@ -46,9 +50,11 @@ function validarContrasena() {
 
 function alertaValidaciones() {
    if (validaNombre()) {
+      alert("Bienvenido sin correo")
       if (validarEmail()) {
+         alert("Bienvenido sin contraseña")
          if (validarContrasena()) {
-            alert("Bienvenido")
+            alert("Bienvenido a todo")
             return true;
          } else {
             alert("Contraseña invalida")
