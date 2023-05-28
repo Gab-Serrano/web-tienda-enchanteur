@@ -1,54 +1,59 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block title %}
-Carrito
+Carrito de compras
 {% endblock title %}
 {% block content %}
 <div class="row">
     <div class="col-lg-12">
-        <div class="box-element">
-
-            <a  class="btn btn-outline-dark" href="{% url 'store' %}">&#x2190; Sigue comprando</a>
-
-            <br>
-            <br>
+        <div class="box-element resumen-compra">
+            <div class="button-productos my-3">
+                <a class="btn btn-outline-light" href="{% url 'store' %}">&#x2190; Sigue comprando</a>
+            </div>
             <table class="table">
                 <tr>
-                    <th><h5>Items: <strong>3</strong></h5></th>
-                    <th><h5>Total:<strong> $42</strong></h5></th>
+                    <th class="vertical-align">
+                        <h5 class="text-light">Items: <strong>3</strong></h5>
+                    </th>
+                    <th class="vertical-align">
+                        <h5 class="text-light">Total:<strong> $42</strong></h5>
+                    </th>
                     <th>
-                        <a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Checkout</a>
+                        <a style="float:right; margin:5px;" class="btn btn-danger"
+                            href="{% url 'checkout' %}">Checkout</a>
                     </th>
                 </tr>
             </table>
-
         </div>
 
-        <br>
         <div class="box-element">
             <div class="cart-row">
-                <div style="flex:2"></div>
-                <div style="flex:2"><strong>Item</strong></div>
-                <div style="flex:1"><strong>Price</strong></div>
-                <div style="flex:1"><strong>Quantity</strong></div>
-                <div style="flex:1"><strong>Total</strong></div>
-            </div>
-            
-            <div class="cart-row">
-                <div style="flex:2"><img class="row-image" src="{% static 'images/placeholder.png' %}"></div>
-                <div style="flex:2"><p>Product 1</p></div>
-                <div style="flex:1"><p>$20</p></div>
-                <div style="flex:1">
-                    <p class="quantity">2</p>
-                    <div class="quantity">
-                        <img class="chg-quantity" src="{% static  'images/arrow-up.png' %}">
-                
-                        <img class="chg-quantity" src="{% static  'images/arrow-down.png' %}">
-                    </div>
-                </div>
-                <div style="flex:1"><p>$32</p></div>
+                <div class="text-light vertical-align" style="flex:2"></div>
+                <div class="text-light vertical-align" style="flex:2"><strong>Item</strong></div>
+                <div class="text-light vertical-align" style="flex:1"><strong>Precio</strong></div>
+                <div class="text-light vertical-align" style="flex:1"><strong>Cantidad</strong></div>
+                <div class="text-light vertical-align" style="flex:1"><strong>Total</strong></div>
             </div>
 
+            <div class="cart-row">
+                <div style="flex:2"><img class="row-image" src="{% static 'assets/img/prod-1.jpg' %}"></div>
+                <div class="text-light categoria-tabla-checkout" style="flex:2">
+                    <p class="m-0">Product 1</p>
+                </div>
+                <div class="text-light categoria-tabla-checkout" style="flex:1">
+                    <p class="m-0">$20</p>
+                </div>
+                <div style="flex:1" class="categoria-tabla-checkout categ-quantity">
+                    <p class="quantity text-light m-0">2</p>
+                    <div class="quantity">
+                        <i class="bi bi-caret-up-fill cantidad-up-down "></i>
+                        <i class="bi bi-caret-down-fill cantidad-up-down"></i>
+                    </div>
+                </div>
+                <div class="text-light categoria-tabla-checkout" style="flex:1">
+                    <p class="m-0">$32</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
