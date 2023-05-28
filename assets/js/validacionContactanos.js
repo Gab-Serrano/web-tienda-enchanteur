@@ -18,9 +18,9 @@ function ValidacionContactanos(){
 
     if(nombreInput.length < 3 && nombreInput2.length < 3 && nombreInput3.length < 3){
         alert('Debe escribir un nombre');
-    } else if((telefonoInput.length != 9 || isNaN(telefonoInput)) || (telefonoInput2.length != 9 || isNaN(telefonoInput2)) || (telefonoInput3.length != 9 || isNaN(telefonoInput3))) {
+    } else if((telefonoInput.length !== 9 || isNaN(telefonoInput)) && (telefonoInput2.length !== 9 || isNaN(telefonoInput2)) && (telefonoInput3.length !== 9 || isNaN(telefonoInput3))) {
         alert('Número de telefono invalido');
-    } else if (correoInput.trim() === '' || !correoInput.includes('@') || !correoInput.includes('.') && correoInput2.trim() === '' || !correoInput2.includes('@') || !correoInput2.includes('.') && correoInput3.trim() === '' || !correoInput3.includes('@') || !correoInput3.includes('.')){
+    } else if ((correoInput.trim() === '' || !correoInput.includes('@') || !correoInput.includes('.')) && (correoInput2.trim() === '' || !correoInput2.includes('@') || !correoInput2.includes('.')) && (correoInput3.trim() === '' || !correoInput3.includes('@') || !correoInput3.includes('.'))) {
         alert('Ingrese un correo válido');
     } else if(asuntoContactanos.trim() === '' && asuntoContactanos2.trim() === '' && asuntoContactanos3.trim() === ''){
         alert('Debe escribir asunto');
@@ -28,6 +28,7 @@ function ValidacionContactanos(){
         alert('Debe escribir un mensaje');
     } else{
         document.forms[0].submit();
+        alert('Tus datos fueron enviados de manera exitosa, estaremos contactandonos contigo')
     }
     
 }
