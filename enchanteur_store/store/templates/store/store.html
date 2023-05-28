@@ -6,38 +6,56 @@ Productos
 {% endblock title %}
 
 {% block content %}
-<div class="row">
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'assets/img/prod-1.jpg' %}">
-        <div class="box-element product">
-            <h6><strong>Product</strong></h6>
-            <hr>
-
-            <button class="btn btn-outline-secondary add-btn">Agregar al carro</button>
-            <a class="btn btn-outline-success" href="#">Ver</a>
-            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+<div class="row products-shelf ">
+    <div class="col-lg-4 col-md-6 col-12 pb-3">
+        <div class="product-card">
+            <img class="thumbnail" src="{% static 'assets/img/prod-1.jpg' %}">
+            <div class="box-element product">
+                <h6 class="lead-light"><strong>Product</strong></h6>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <div class="buttons d-flex gap-2">
+                        <button class="btn btn-outline-secondary add-btn">Agregar al carro</button>
+                        <a class="btn btn-outline-success" href="#">Ver</a>
+                    </div>
+                    <h4 class="lead-light d-flex align-items-center"><strong>$20</strong></h4>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'assets/img/prod-2.jpg' %}">
-        <div class="box-element product">
-            <h6><strong>Product</strong></h6>
-            <hr>
-
-            <button class="btn btn-outline-secondary add-btn">Agregar al carro</button>
-            <a class="btn btn-outline-success" href="#">Ver</a>
-            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+    <div class="col-lg-4 col-md-6 col-12 pb-3">
+        <div class="product-card">
+            <img class="thumbnail" src="{% static 'assets/img/prod-2.jpg' %}">
+            <div class="box-element product">
+                <h6 class="lead-light"><strong>Product</strong></h6>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <div class="buttons d-flex gap-2">
+                        <button class="btn btn-outline-secondary add-btn">Agregar al carro</button>
+                        <a class="btn btn-outline-success" href="#">Ver</a>
+                    </div>
+                    <h4 class="lead-light d-flex align-items-center"><strong>$20</strong></h4>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'assets/img/prod-3.jpg' %}">
-        <div class="box-element product">
-            <h6><strong>Product</strong></h6>
-            <hr>
-
-            <button class="btn btn-outline-secondary add-btn">Agregar al carro</button>
-            <a class="btn btn-outline-success" href="#">Ver</a>
-            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+    <div class="col-lg-4 col-md-6 col-12 pb-3">
+        <div class="product-card">
+            <img class="thumbnail" src="{% static 'assets/img/prod-3.jpg' %}">
+            <div class="box-element product">
+                <h6 class="lead-light"><strong>Product</strong></h6>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <div class="buttons d-flex gap-2">
+                        <button class="btn btn-outline-secondary add-btn">Agregar al carro</button>
+                        <a class="btn btn-outline-success" href="#">Ver</a>
+                    </div>
+                    <h4 class="lead-light d-flex align-items-center"><strong>$20</strong></h4>
+                </div>
+            </div>
         </div>
     </div>
 </div>
