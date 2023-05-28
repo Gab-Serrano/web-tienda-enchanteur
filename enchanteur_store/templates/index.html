@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
     <title>Enchanteur - Tienda Online</title>
+    <!-- Ícono página -->
+    <link rel="icon" href="{% static 'assets/img/logo-movil.png' %}">
     <!-- Reseteo de los parámetros CSS del navegador -->
     <link rel="stylesheet" href="{% static 'assets/css/reset.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/normalize.css' %}" />
@@ -89,7 +91,7 @@
             <div class="nav-menu d-none d-lg-flex">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" aria-current="page" href="index.html"><i
+                        <a class="nav-link d-flex gap-2" aria-current="page" href="{% url 'home' %}"><i
                                 class="bs bi-suit-spade-fill"></i>
                             Inicio</a>
                     </li>
@@ -99,7 +101,7 @@
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" aria-current="page" href="#seccion-productos"><i
+                        <a class="nav-link d-flex gap-2" aria-current="page" href="{% url 'store' %}"><i
                                 class="bs bi-suit-diamond-fill"></i>Productos</a>
                     </li>
                     <li class="nav-item">
@@ -125,8 +127,15 @@
                             <span class="d-none d-lg-flex">Iniciar sesión</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" href="#"><i class="bs bi-cart-fill"></i>
-                            <span class="d-none d-lg-flex">Carrito</span></a>
+                        <a class="nav-link d-flex gap-1" id="nav-link-cart" href="{% url 'cart' %}">
+                            <i class="bs bi-cart-fill"></i>
+                            <div>
+                                <span id="cart-total">0</span>
+                            </div>
+                            <div>
+                                <span class="d-none d-lg-flex" id="cart-link-text">Carrito</span>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -157,7 +166,7 @@
                         </a>
                     </div>
                     <div class="sidebar-banner d-flex align-items-center" id="products">
-                        <a href="#" class="d-flex">
+                        <a href="{% url 'store' %}" class="d-flex">
                             <h5 class="m-0 p-0">Productos</h5>
                         </a>
                     </div>
@@ -196,13 +205,13 @@
     </nav>
     <!-- Hero -->
     <section class="hero container-fluid text-start"">
-        <div class="row align-items-center align-items-sm-end pb-5 h-100">
-            <div class="hero-content">
-                <h1 class="hero-title title-light">Descubre el arte de la magia</h1>
-                <h6 class="hero-lead lead-light">Encuentra el mazo perfecto para tus trucos y añade un toque de magia a
-                    tu vida.</h6>
-                <button class="hero-btn">Comprar ahora</button>
-            </div>
+        <div class=" row align-items-center align-items-sm-end pb-5 h-100">
+        <div class="hero-content">
+            <h1 class="hero-title title-light">Descubre el arte de la magia</h1>
+            <h6 class="hero-lead lead-light">Encuentra el mazo perfecto para tus trucos y añade un toque de magia a
+                tu vida.</h6>
+            <button class="hero-btn">Comprar ahora</button>
+        </div>
         </div>
     </section>
     <!-- About us-->
@@ -457,4 +466,5 @@
     <script src="{% static 'assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js' %}"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
 </body>
+
 </html>
