@@ -17,7 +17,9 @@ Productos
                     </p>
                     <div class="d-flex justify-content-between">
                         <div class="buttons d-flex gap-2">
-                            <button class="btn btn-outline-secondary add-btn">Agregar al carro</button>
+                            <button class="btn btn-outline-secondary add-btn update-cart"
+                            data-product="{{product.id}}"
+                            data-action="add">Agregar al carro</button>
                             <a class="btn btn-outline-success" href="#">Ver</a>
                         </div>
                         <h4 class="lead-light d-flex align-items-center"><strong>${{product.price}}</strong></h4>

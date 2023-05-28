@@ -1,4 +1,4 @@
-jQuery.noConflict();
+/* jQuery.noConflict();
 (function($) {
   $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
@@ -21,7 +21,7 @@ jQuery.noConflict();
       }
     })
   });
-})(jQuery);
+})(jQuery); */
 
 document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener('scroll', function() {

@@ -43,6 +43,29 @@
     <!-- Tipografía -->
     <link rel="stylesheet" href="{% static 'assets/css/typography/title.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/typography/lead.css' %}">
+
+    <script type="text/javascript">
+        var user = "{{request.user}}";
+
+        function getToken(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(
+                            cookie.substring(name.length + 1)
+                        );
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken');
+    </script>
 </head>
 
 <body>
@@ -121,7 +144,7 @@ navbar-expand-lg navbar-dark" id="navbar-top">
                         <a class="nav-link d-flex gap-1" id="nav-link-cart" href="{% url 'cart' %}">
                             <i class="bs bi-cart-fill"></i>
                             <div>
-                                <span id="cart-total">0</span>
+                                <span id="cart-total">{{cartItems}}</span>
                             </div>
                             <div>
                                 <span class="d-none d-lg-flex" id="cart-link-text">Carrito</span>
@@ -281,6 +304,7 @@ navbar-expand-lg navbar-dark" id="navbar-top">
     <script src="{% static 'node_modules/@popperjs/core/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/cart.js' %}"></script>  
 </body>
 
 </html>
