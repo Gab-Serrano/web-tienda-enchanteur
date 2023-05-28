@@ -67,11 +67,8 @@
 }
 
 .quantity{
-	display: inline-block;
-	font-weight: 700;
-	padding-right:10px;
-	
-
+	display: flex;
+	flex-direction: column;
 }
 
 .chg-quantity{
@@ -110,4 +107,29 @@
 .btn-outline-secondary{
 	border-color: var(--text-color-tertiary);
 	color: var(--text-color-tertiary);
+}
+
+.vertical-align{
+	vertical-align: middle;
+	align-items: center;
+}
+
+.resumen-compra{
+	margin-bottom: 2rem;
+}
+
+.categoria-tabla-checkout{
+	display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.cantidad-up-down{
+	color: #ececec;
+	font-size: 1.2rem;
+	margin: -3px 0;
+}
+
+.categ-quantity{
+	gap: 0.5rem;
 }
