@@ -109,7 +109,7 @@
             </div>
         </div>
         <!-- logo -->
-        <a class="logo container-fluid justify-content-center  d-flex py-2" href="#">
+        <a class="logo container-fluid justify-content-center  d-flex py-2" href="{% url 'home' %}">
             <img class="img-fluid" src="{% static 'assets/img/enchanteur-full-logo.png' %}" alt="Logo de Enchanteur">
         </a>
     </header>
@@ -132,7 +132,7 @@ navbar-expand-lg navbar-dark" id="navbar-top">
                             Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" aria-current="page" href="#aboutus"><i
+                        <a class="nav-link d-flex gap-2" aria-current="page" href="{% url 'home' %}"><i
                                 class="bs bi-suit-club-fill"></i>Nosotros</a>
                     </li>
                     </li>
@@ -141,11 +141,11 @@ navbar-expand-lg navbar-dark" id="navbar-top">
                                 class="bs bi-suit-diamond-fill"></i>Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" aria-current="page" href="#carouselTutorials"><i
+                        <a class="nav-link d-flex gap-2" aria-current="page" href="{% url 'home' %}"><i
                                 class="bs bi-suit-heart-fill"></i>Tutoriales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex gap-2" aria-current="page" href="pages/contact.html"><i
+                        <a class="nav-link d-flex gap-2" aria-current="page" href="{% url 'contact' %}"><i
                                 class="bs bi-dice-5-fill"></i>Contactanos</a>
                     </li>
                 </ul>
@@ -158,7 +158,7 @@ navbar-expand-lg navbar-dark" id="navbar-top">
                             <span class="d-none d-lg-flex">Buscar</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-none d-lg-flex gap-2" href="pages/login.html"><i
+                        <a class="nav-link d-none d-lg-flex gap-2" href="{% url 'login' %}"><i
                                 class="bs bi-person-fill"></i>
                             <span class="d-none d-lg-flex">Iniciar sesión</span></a>
                     </li>
@@ -181,7 +181,7 @@ navbar-expand-lg navbar-dark" id="navbar-top">
             aria-labelledby="offcanvasNavbarLabel">
             <!-- offcanvasNavbar - header -->
             <div class="offcanvas-header py-4">
-                <a class="logo-offcanvas" href="../index.html">
+                <a class="logo-offcanvas" href="{% url 'home' %}">
                     <img src="{% static 'assets/img/enchanteur-full-logo.png' %}" alt="Logo de Enchanteur" width="150">
                 </a>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
@@ -192,12 +192,12 @@ navbar-expand-lg navbar-dark" id="navbar-top">
                 <!-- offcanvasNavbar - menu-items -->
                 <div class="container-fluid p-0">
                     <div class="sidebar-banner d-flex align-items-center" id="login">
-                        <a href="pages\login.html" class="login-link d-flex justify-content-between align-items-center">
+                        <a href="{% url 'login' %}" class="login-link d-flex justify-content-between align-items-center">
                             <h5 class="m-0 p-0">Inicia sesión</h5>
                         </a>
                     </div>
                     <div class="sidebar-banner d-flex align-items-center" id="about-us">
-                        <a href="#" class="d-flex">
+                        <a href="{% url 'home' %}" class="d-flex">
                             <h5 class="m-0 p-0">Nosotros</h5>
                         </a>
                     </div>
@@ -207,12 +207,12 @@ navbar-expand-lg navbar-dark" id="navbar-top">
                         </a>
                     </div>
                     <div class="sidebar-banner d-flex align-items-center" id="tutoriales">
-                        <a href="#" class="d-flex">
+                        <a href="{% url 'home' %}" class="d-flex">
                             <h5 class="m-0 p-0">Tutoriales</h5>
                         </a>
                     </div>
                     <div class="sidebar-banner d-flex align-items-center" id="contactanos">
-                        <a href="#" class="d-flex">
+                        <a href="{% url 'contact' %}" class="d-flex">
                             <h5 class="m-0 p-0">Contáctanos</h5>
                         </a>
                     </div>
