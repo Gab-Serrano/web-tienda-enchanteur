@@ -13,10 +13,10 @@ Carrito de compras
             <table class="table">
                 <tr>
                     <th class="vertical-align">
-                        <h5 class="text-light">Items: <strong>3</strong></h5>
+                        <h5 class="text-light">Items: <strong>{{order.get_cart_items}}</strong></h5>
                     </th>
                     <th class="vertical-align">
-                        <h5 class="text-light">Total:<strong> $42</strong></h5>
+                        <h5 class="text-light">Total:<strong> ${{order.get_cart_total}}</strong></h5>
                     </th>
                     <th>
                         <a style="float:right; margin:5px;" class="btn btn-danger"
@@ -34,27 +34,32 @@ Carrito de compras
                 <div class="text-light vertical-align" style="flex:1"><strong>Cantidad</strong></div>
                 <div class="text-light vertical-align" style="flex:1"><strong>Total</strong></div>
             </div>
-
+            
+           <!--  {% for item in items%} -->
             <div class="cart-row">
-                <div style="flex:2"><img class="row-image" src="{% static 'assets/img/prod-1.jpg' %}"></div>
+                <div style="flex:2"><img class="row-image" src="{{item.product.image.url}}"></div>
                 <div class="text-light categoria-tabla-checkout" style="flex:2">
-                    <p class="m-0">Product 1</p>
+                    <p class="m-0">{{item.product.name}}</p>
                 </div>
                 <div class="text-light categoria-tabla-checkout" style="flex:1">
-                    <p class="m-0">$20</p>
+                    <p class="m-0">{{item.product.price}}</p>
                 </div>
                 <div style="flex:1" class="categoria-tabla-checkout categ-quantity">
-                    <p class="quantity text-light m-0">2</p>
+                    <p class="quantity text-light m-0">{{item.quantity}}</p>
                     <div class="quantity">
-                        <i class="bi bi-caret-up-fill cantidad-up-down "></i>
-                        <i class="bi bi-caret-down-fill cantidad-up-down"></i>
+                        <i class="bi bi-caret-up-fill cantidad-up-down update-cart" data-product="{{item.product.id}}"
+                        data-action="add"></i>
+                        <i class="bi bi-caret-down-fill cantidad-up-down update-cart" data-product="{{item.product.id}}"
+                        data-action="remove"></i>
                     </div>
                 </div>
                 <div class="text-light categoria-tabla-checkout" style="flex:1">
-                    <p class="m-0">$32</p>
+                    <p class="m-0">{{item.get_total}}</p>
                 </div>
             </div>
+            <!-- {% endfor %} -->
         </div>
     </div>
 </div>
 {% endblock %}
+```
