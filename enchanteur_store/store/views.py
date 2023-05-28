@@ -9,6 +9,16 @@ def home(request):
     context = {'cartItems': cartCount (request)}
     return render(request, 'store/index.html', context)
 
+def login(request):
+    cartCount (request)
+    context = {'cartItems': cartCount (request)}
+    return render(request, 'store/login.html', context)
+
+def contact(request):
+    cartCount (request)
+    context = {'cartItems': cartCount (request)}
+    return render(request, 'store/contact.html', context)
+
 def store(request):
     if request.user.is_authenticated:
         customer = request.user.customer
