@@ -65,6 +65,28 @@
             return cookieValue;
         }
         var csrftoken = getToken('csrftoken');
+
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+            for (var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+                if (name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+            //devolver nulo si no se encuentra
+            return null;
+        }
+        var cart = JSON.parse(getCookie('cart'));
+
+        if (cart == undefined || cart == null) {
+            cart = {};
+            console.log('Cart creado!');
+            document.cookie = 'cart=' + JSON.stringify(cart) + "; domain=; path=/";
+        } else {
+            console.log('Cart existente!');
+        }
+
     </script>
 </head>
 
