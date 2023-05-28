@@ -130,7 +130,7 @@
                         <a class="nav-link d-flex gap-1" id="nav-link-cart" href="{% url 'cart' %}">
                             <i class="bs bi-cart-fill"></i>
                             <div>
-                                <span id="cart-total">0</span>
+                                <span id="cart-total">{{cartItems}}</span>
                             </div>
                             <div>
                                 <span class="d-none d-lg-flex" id="cart-link-text">Carrito</span>
@@ -464,6 +464,7 @@
     <script src="{% static 'node_modules/@popperjs/core/dist/umd/popper.min.js' %}"></script>
     <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/API/OwlCarousel2-2.3.4/dist/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/owlCarousel.js' %}"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
 </body>
 

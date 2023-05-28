@@ -35,7 +35,7 @@ Carrito de compras
                 <div class="text-light vertical-align" style="flex:1"><strong>Total</strong></div>
             </div>
             
-            {% for item in items%}
+           <!--  {% for item in items%} -->
             <div class="cart-row">
                 <div style="flex:2"><img class="row-image" src="{{item.product.image.url}}"></div>
                 <div class="text-light categoria-tabla-checkout" style="flex:2">
@@ -47,15 +47,17 @@ Carrito de compras
                 <div style="flex:1" class="categoria-tabla-checkout categ-quantity">
                     <p class="quantity text-light m-0">{{item.quantity}}</p>
                     <div class="quantity">
-                        <i class="bi bi-caret-up-fill cantidad-up-down "></i>
-                        <i class="bi bi-caret-down-fill cantidad-up-down"></i>
+                        <i class="bi bi-caret-up-fill cantidad-up-down update-cart" data-product="{{item.product.id}}"
+                        data-action="add"></i>
+                        <i class="bi bi-caret-down-fill cantidad-up-down update-cart" data-product="{{item.product.id}}"
+                        data-action="remove"></i>
                     </div>
                 </div>
                 <div class="text-light categoria-tabla-checkout" style="flex:1">
                     <p class="m-0">{{item.get_total}}</p>
                 </div>
             </div>
-            {% endfor %}
+            <!-- {% endfor %} -->
         </div>
     </div>
 </div>
