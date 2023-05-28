@@ -10,7 +10,7 @@ Productos
     {% for product in products %}
         <div class="col-lg-4 col-md-6 col-12 pb-3">
             <div class="product-card">
-                <img class="thumbnail" src="{% static 'assets/img/prod-1.jpg' %}">
+                <img class="thumbnail" src="{{product.image.url}}">
                 <div class="box-element product">
                     <h6 class="lead-light"><strong>{{product.name}}</strong></h6>
                     <p class="description">{{product.description}}
