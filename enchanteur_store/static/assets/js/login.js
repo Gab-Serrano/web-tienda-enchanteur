@@ -28,44 +28,37 @@ function validarContrasena() {
    }
 }
 */
-function validarContrasena() {
-   alert("validarContrasena")
+
+
+/* function validarContrasena() {
    var pass = document.getElementsById("Contraseña").value;
-   alert("pass");
    var repass = document.getElementsById
       ("ConfirmaContraseña").value;
-   alert("repass");
    if (pass.length >= 8 || repass.length >= 8) {
-      alert("if 1")
-      if (pass == repass) { 
-         alert("if 2")      
+      if (pass == repass) {   
          return true;
       } else {
-         alert('Las contraseñas no son iguales.');
          return false;
       }
    }
-}
-
+} */
 
 function alertaValidaciones() {
    if (validaNombre()) {
-      alert("Bienvenido sin correo")
       if (validarEmail()) {
-         alert("Bienvenido sin contraseña")
          if (validarContrasena()) {
             alert("Bienvenido a todo")
             return true;
          } else {
-            alert("Contraseña invalida")
+            /* alert("Contraseña invalida") */
             return false;
          }
       } else {
-         alert("Correo invalido")
+         /* alert("Correo invalido") */
          return false;
       }
    } else {
-      alert("Nombre invalido")
+      /* alert("Nombre invalido") */
       return false;
    }
 }
