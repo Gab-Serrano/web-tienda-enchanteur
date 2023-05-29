@@ -46,6 +46,7 @@ Mock-up del proyecto disponible [aqui](https://www.figma.com/file/ESxtuOdkHs8DZT
 - Se agrega funcionalidad a carrito de compras.
 - Se genera modelo de base de datos.
 - Se implementa backend y super-usuario.
+- Se despliega en Pythoneverywhere.com
 
 ### v 1.0
 
