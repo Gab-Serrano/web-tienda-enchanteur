@@ -1,5 +1,6 @@
 {% extends 'store/main.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
 
 <div class="bg-products py-5">
@@ -27,7 +28,7 @@
                                 <h5 class="text-light">Items: <strong>{{order.get_cart_items}}</strong></h5>
                             </th>
                             <th class="vertical-align">
-                                <h5 class="text-light">Total:<strong> ${{order.get_cart_total}}</strong></h5>
+                                <h5 class="text-light">Total:<strong> ${{order.get_cart_total|intcomma}}</strong></h5>
                             </th>
                             <th>
                                 <a style="float:right; margin:5px;" class="btn btn-danger"
@@ -53,7 +54,7 @@
                             <p class="m-0">{{item.product.name}}</p>
                         </div>
                         <div class="text-light categoria-tabla-checkout" style="flex:1">
-                            <p class="m-0">{{item.product.price}}</p>
+                            <p class="m-0">${{ item.product.price|intcomma }}</p>
                         </div>
                         <div style="flex:1" class="categoria-tabla-checkout categ-quantity">
                             <p class="quantity text-light m-0">{{item.quantity}}</p>
@@ -65,7 +66,7 @@
                             </div>
                         </div>
                         <div class="text-light categoria-tabla-checkout" style="flex:1">
-                            <p class="m-0">{{item.get_total}}</p>
+                            <p class="m-0">${{ item.get_total|intcomma }}</p>
                         </div>
                     </div>
                     <!-- {% endfor %} -->

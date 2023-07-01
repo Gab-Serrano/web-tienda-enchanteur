@@ -40,9 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 setTimeout(function () {
   var messageAlert = document.getElementById("message-alert");
+  if (messageAlert) {
   messageAlert.style.transition = "opacity 1s";
   messageAlert.style.opacity = "0";
   setTimeout(function () {
     messageAlert.style.display = "none";
   }, 1000); // 1000 ms = 1 segundo
+  }
 }, 5000); // 5000 ms = 5 segundos
