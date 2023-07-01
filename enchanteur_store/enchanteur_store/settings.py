@@ -75,7 +75,8 @@ TEMPLATES = [
         },
     },
 ]
-
+LOGIN_REDIRECT_URL = 'store'
+LOGOUT_REDIRECT_URL = 'home'
 WSGI_APPLICATION = 'enchanteur_store.wsgi.application'
 
 
