@@ -13,7 +13,6 @@ class Product(models.Model):
     name = models.CharField(max_length = 200, null=True)
     description = models.CharField(max_length = 200, null=True)
     price = models.IntegerField()
-    digital = models.BooleanField(default=False, null=True, blank=False)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
