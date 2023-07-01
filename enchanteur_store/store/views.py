@@ -3,6 +3,11 @@ from .models import *
 from django.http import JsonResponse
 import json
 from . utils import cookieCart
+from .forms import ProductoForm
+from .models import Product
+from django.shortcuts import redirect, reverse
+from django.contrib import messages
+
 
 def home(request):
     cartCount (request)
@@ -95,3 +100,26 @@ def cartCount (request):
         cookieData = cookieCart(request)
         cartItems = cookieData['cartItems']
     return cartItems
+
+def manageView(request):
+    context = {}
+    return render(request, 'store/manageView.html', context)
+
+def addProduct(request):
+    context = {}
+
+    form = ProductoForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Producto agregado correctamente')
+            return redirect(reverse('addProduct'))
+        else:
+            messages.error(request, 'Error al agregar el producto')
+    
+    context['form'] = form
+    return render(request, 'store/addProduct.html', context)
+
+def updateProduct(request):
+    context = {}
+    return render(request, 'store/updateProduct.html', context)
