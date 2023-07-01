@@ -77,12 +77,8 @@
 
         if (cart == undefined || cart == null) {
             cart = {};
-            console.log('Cart creado!');
             document.cookie = 'cart=' + JSON.stringify(cart) + "; domain=; path=/";
-        } else {
-            console.log('Cart existente!');
         }
-
     </script>
 </head>
 
@@ -101,6 +97,13 @@
                     <a href="mailto:info@enchanteur.cl">
                         info@enchanteur.cl
                     </a>
+                </div>
+                <div class="header-contact accesoStaff col">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'manageView' %}" class="icon-header bi bi-person">Acceso Staff</a>
+                    {% else %}
+                    <a href="{% url 'admin:index' %}" class="icon-header bi bi-person">Acceso Staff</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
