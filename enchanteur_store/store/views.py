@@ -20,6 +20,11 @@ def login(request):
     context = {'cartItems': cartCount (request)}
     return render(request, 'store/login.html', context)
 
+def singin(request):
+    cartCount (request)
+    context = {'cartItems': cartCount (request)}
+    return render(request, 'store/singin.html', context)
+
 def contact(request):
     cartCount (request)
     context = {'cartItems': cartCount (request)}
