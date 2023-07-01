@@ -2,11 +2,12 @@ from django.shortcuts import render
 from .models import *
 from django.http import JsonResponse
 import json
-from . utils import cookieCart
+from . utils import cookieCart, guestOrder
 from .forms import ProductoForm
 from .models import Product
 from django.shortcuts import redirect, reverse
 from django.contrib import messages
+import datetime
 
 
 def home(request):
@@ -67,6 +68,36 @@ def checkout(request):
     context = {'items':items, 'order':order, 'cartItems': cartItems}
     return render(request, 'store/checkout.html', context)
 
+def processOrder(request):
+    transaction_id = datetime.datetime.now().timestamp()
+    data = json.loads(request.body)
+
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer = customer, complete = False)
+ 
+    else:
+        customer, order = guestOrder(request, data)
+    
+    total = int(data['form']['total'])
+    order.transaction_id = transaction_id
+
+    if total == order.get_cart_total:
+            order.complete = True
+    order.save()
+
+    ShippingAddress.objects.create(
+                customer = customer,
+                order = order,
+                address = data['shipping']['address'],
+                city = data['shipping']['city'],
+                state = data['shipping']['state'],
+                country = data['shipping']['country'],
+                zipcode = data['shipping']['zipcode'],
+            )
+
+    return JsonResponse('Payment complete!', safe=False)
+
 def updateItem(request):
     data = json.loads(request.body)
     productId = data['productId']
@@ -102,7 +133,8 @@ def cartCount (request):
     return cartItems
 
 def manageView(request):
-    context = {}
+    products = Product.objects.all()
+    context = {'products': products,}
     return render(request, 'store/manageView.html', context)
 
 def addProduct(request):
@@ -113,11 +145,14 @@ def addProduct(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Producto agregado correctamente')
-            return redirect(reverse('addProduct'))
+            context['success_message'] = True  # Agregar esta línea
+            return redirect('addProduct')
         else:
-            messages.error(request, 'Error al agregar el producto')
+            print(form.errors)  # Imprime los errores en la consola
+            messages.warning(request, 'Error al agregar el producto')
     
     context['form'] = form
+
     return render(request, 'store/addProduct.html', context)
 
 def updateProduct(request):
