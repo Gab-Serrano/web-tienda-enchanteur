@@ -139,7 +139,7 @@
         <div class="container">
             <div class="row">
                 <!-- Productos -->
-                <div class="col-lg-6">
+                <div class="col-12">
                     <div class="box-element">
                         <h1 class="text-light">Lista de Productos</h1>
                         <div class="table-container mb-3">
@@ -150,6 +150,7 @@
                                         <th>Descripción</th>
                                         <th>Precio</th>
                                         <th>Imagen</th>
+                                        <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -160,6 +161,9 @@
                                         <td>${{product.price|intcomma}}</td>
                                         <td><img src="{{product.image.url}}" alt="{{ producto.nombre }}" height="50">
                                         </td>
+                                        <td>
+                                            <a class="" href="{% url 'editProduct' pk=product.pk %}">Editar</a>
+                                            <a class="" href="{% url 'deleteProduct' pk=product.pk %}">Eliminar</a>
                                     </tr>
                                     {% endfor %}
                                 </tbody>

@@ -13,10 +13,10 @@ urlpatterns = [
 
     path('manageView/', views.manageView, name="manageView"),
     path('addProduct/', views.addProduct, name="addProduct"),
-    path('updateProduct/', views.updateProduct, name="updateProduct"),
     path('manageView/', views.manageView, name="manageView"),
     path('addProduct/', views.addProduct, name="addProduct"),
-    path('updateProduct/', views.updateProduct, name="updateProduct"),
+    path('editProduct/<int:pk>', views.editProduct, name="editProduct"),
+    path('deleteProduct/<int:pk>', views.deleteProduct, name="deleteProduct"),
 
     path('update_item/', views.updateItem, name="update_item"),
     path('process_order/', views.processOrder, name="process_order"),
