@@ -133,3 +133,9 @@
 .categ-quantity{
 	gap: 0.5rem;
 }
+
+/* @media (min-width: 1200px) {
+	.box-text{
+		font-size: 1.2rem;
+	}
+} */

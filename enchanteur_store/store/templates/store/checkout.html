@@ -1,5 +1,100 @@
 {% extends 'store/main.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
-<h3>checkout</h3>
-{% endblock %}
+<div class="bg-products p-5">
+    <!-- Title -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center title-dark">
+                    Checkout
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- Content -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="box-element mb-3" id="form-wrapper">
+                <form id="form" method="post">{% csrf_token %}
+                    <div class="mb-4" id="user-info">
+                        <h4 class="text-light">Datos del receptor</h4>
+                        <div class="form-field">
+                            <label class="text-light" for="name">Nombre completo</label>
+                            <input required class="form-control" type="text" name="name" placeholder="Harry Potter">
+                        </div>
+                        <div class="form-field">
+                            <label class="text-light" for="email">Correo electrónico</label>
+                            <input required class="form-control" type="email" name="email"
+                                placeholder="harry.potter@gryffindor.hw">
+                        </div>
+                    </div>
+
+                    <div class="mb-4" id="shipping-info">
+                        <h4 class="text-light">Información de envío</h4>
+                        <div class="form-field">
+                            <label class="text-light" for="address">Dirección</label>
+                            <input class="form-control" type="text" name="address" placeholder="Privet Drive 4">
+                        </div>
+                        <div class="form-field">
+                            <label class="text-light" for="city">Ciudad</label>
+                            <input class="form-control" type="text" name="city" placeholder="Little Whinging">
+                        </div>
+                        <div class="form-field">
+                            <label class="text-light" for="state">Región/Estado</label>
+                            <input class="form-control" type="text" name="state" placeholder="Surrey">
+                        </div>
+                        <div class="form-field">
+                            <label class="text-light" for="country">País</label>
+                            <input class="form-control" type="text" name="country" placeholder="Inglaterra">
+                        </div>
+                        <div class="form-field">
+                            <label class="text-light" for="zipcode">Zipcode</label>
+                            <input class="form-control" type="text" name="zipcode" placeholder="2450000">
+                        </div>
+                    </div>
+                    <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+                </form>
+            </div>
+            <!-- Payment -->
+            <div class="box-element hidden" id="payment-info">
+                <small class="text-light">Paypal Options</small>
+                <button id="make-payment">Make payment</button>
+            </div>
+        </div>
+
+        <!-- Resumen orden -->
+        <div class="col-lg-6">
+            <div class="box-element">
+                <div class="d-flex justify-content-between">
+                    <h3 class="text-light">Resumen de la orden</h3>
+                    <a class="btn btn-outline-light" href="{% url 'cart' %}">&#x2190; Volver al carrito</a>
+                </div>
+
+                {% for item in items %}
+                <div class="cart-row">
+                    <div style="flex:2"><img class="row-image" src="{{item.product.image.url}}"></div>
+                    <div class="text-light categoria-tabla-checkout" style="flex:2">
+                        <p class="m-0 text-light">{{item.product.name}}</p>
+                    </div>
+                    <div class="text-light categoria-tabla-checkout" style="flex:1">
+                        <p class="m-0 text-light">${{ item.product.price|intcomma }}</p>
+                    </div>
+                    <div class="categoria-tabla-checkout categ-quantity" style="flex:1">
+                        <p class="quantity text-light m-0">x{{item.quantity}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                <h5 class="text-light">Items: {{order.get_cart_items}}</h5>
+                <h5 class="text-light">Total: ${{ order.get_cart_total|intcomma }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var total = '{{ order.get_cart_total }}'
+</script>
+<script src="{% static 'assets/js/checkout.js' %}"></script>
+{% endblock content %}
