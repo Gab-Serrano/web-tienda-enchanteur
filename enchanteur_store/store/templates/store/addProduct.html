@@ -4,15 +4,18 @@
 {% block meta %}
 {% endblock %}
 
+{% block encabezado %}
+<h1 class="text-center title-dark">
+    Agregar productos
+</h1>
+{% endblock encabezado %}
 
 {% block content %}
 <!-- Title -->
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center title-dark">
-                Agregar productos
-            </h1>
+
         </div>
     </div>
 </div>
@@ -21,37 +24,40 @@
         <div class="container">
             {% if messages %}
             {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}" id="message-alert">
+            <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
                 {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             {% endfor %}
             {% endif %}
-            <form method="post" enctype="multipart/form-data">
+            <div id="message-container"></div>
+            <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
                 {% csrf_token %}
                 <div class="form-group mb-3">
                     <label for="nombre">Nombre del producto:</label>
                     <input type="text" name="name" id="id_name" class="form-control" id="nombre"
                         placeholder="Ingrese el nombre del producto">
                 </div>
-            
+
                 <div class="form-group mb-3">
                     <label for="descripcion">Descripción:</label>
                     <textarea class="form-control" name="description" id="id_description" rows="3"
                         placeholder="Ingrese la descripción del producto"></textarea>
+                    <span id="description-error" class="error-message"></span>
                 </div>
-            
+
                 <div class="form-group mb-3">
                     <label for="precio">Precio:</label>
                     <input type="number" name="price" id="id_price" class="form-control" id="precio"
                         placeholder="Ingrese el precio del producto">
                 </div>
-            
+
                 <div class="form-group mb-3">
                     <label for="imagen">Subir imagen:</label>
                     <input type="file" class="form-control-file" name="image" accept="image/*" id="id_imagen">
                 </div>
-            
-                <button type="submit" class="btn btn-saber-mas my-2 lead-light">Agregar producto</button>
+
+                <button type="submit" class="btn btn-dark my-2 lead-light">Agregar producto</button>
             </form>
         </div>
     </div>

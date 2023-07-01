@@ -133,7 +133,8 @@ def cartCount (request):
     return cartItems
 
 def manageView(request):
-    context = {}
+    products = Product.objects.all()
+    context = {'products': products,}
     return render(request, 'store/manageView.html', context)
 
 def addProduct(request):
@@ -144,11 +145,14 @@ def addProduct(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Producto agregado correctamente')
-            return redirect(reverse('addProduct'))
+            context['success_message'] = True  # Agregar esta línea
+            return redirect('addProduct')
         else:
-            messages.error(request, 'Error al agregar el producto')
+            print(form.errors)  # Imprime los errores en la consola
+            messages.warning(request, 'Error al agregar el producto')
     
     context['form'] = form
+
     return render(request, 'store/addProduct.html', context)
 
 def updateProduct(request):
