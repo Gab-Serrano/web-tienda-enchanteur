@@ -1,0 +1,40 @@
+{% extends 'home/main.html' %}
+{% load static %}
+
+{% block custom-meta %}
+<!-- Title -->
+<title>Enchanteur - Acerca de nosotros</title>
+<link rel="stylesheet" href="{% static 'assets/css/pages/about-us/about-us.css' %}" />
+{% endblock custom-meta%}
+
+{% block content %}
+<!-- Banner -->
+<div class="container-fluid">
+    <!-- Title -->
+    <div class="row title-bg-about-us align-items-center">
+        <h1 class="text-center title-light col">
+            Acerca de nosotros
+        </h1>
+    </div>
+</div>
+<!-- Background -->
+<div class="bg-products py-5">
+    <!-- Content -->
+    <section id="about-us" class="container">
+        <div class="row justify-content-center">
+            <div class="content-1 col-5">
+                <p class="text-center">En Enchanteur, nuestra tienda de mazos de cartas de colección y trucos de magia, nos dedicamos apasionadamente a brindar productos de la más alta calidad para magos de todos los niveles. Nos enorgullece ser el destino preferido de los entusiastas de la magia que buscan expandir su repertorio y llevar su arte al siguiente nivel.</p>
+                <p class="text-center">Fundada por un equipo de apasionados de la magia, nuestra tienda nació con la visión de crear un espacio mágico donde los sueños se convierten en realidad. Nos esforzamos por ofrecer una selección de mazos de cartas únicos y de edición limitada, meticulosamente seleccionados para brindarte una experiencia de juego excepcional.</p>
+            </div>
+            <div class="content-2 col-5">
+                <p class="text-center">Nuestro compromiso con la excelencia se refleja en cada aspecto de nuestra tienda. Trabajamos en estrecha colaboración con los principales fabricantes y diseñadores de mazos de cartas para asegurarnos de ofrecerte productos de calidad premium. Nuestra colección está cuidadosamente curada para satisfacer incluso a los magos más exigentes.</p>
+                <p class="text-center">Pero Enchanteur no es solo una tienda, es una comunidad mágica. Nos enorgullece ofrecer un ambiente acogedor donde los magos pueden conectarse, aprender y compartir sus conocimientos. Organizamos eventos especiales, talleres y sesiones de práctica para que puedas perfeccionar tus habilidades y descubrir nuevos trucos impresionantes.</p>
+            </div>
+            
+        </div>        
+    </section>
+</div>
+{% endblock content%}
+
+{% block custom-js %}
+{% endblock custom-js%}
