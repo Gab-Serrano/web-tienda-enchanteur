@@ -1,6 +1,0 @@
-.title-bg-about-us {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
-    url("../../../img/about-us-img.jpg") no-repeat center center/cover;
-/*   margin-bottom: 3rem; */
-  min-height: 50vh;
-}
