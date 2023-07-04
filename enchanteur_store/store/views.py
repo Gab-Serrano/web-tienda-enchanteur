@@ -9,12 +9,6 @@ from django.shortcuts import redirect, get_object_or_404, reverse
 from django.contrib import messages
 import datetime
 
-
-def home(request):
-    cartCount (request)
-    context = {'cartItems': cartCount (request)}
-    return render(request, 'store/index.html', context)
-
 def login(request):
     cartCount (request)
     context = {'cartItems': cartCount (request)}

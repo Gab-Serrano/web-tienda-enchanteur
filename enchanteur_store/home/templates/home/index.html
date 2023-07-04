@@ -1,6 +1,6 @@
-{% extends 'store/main.html' %}
+{% extends 'home/main.html' %}
 {% load static %}
-{% block meta %}
+{% block custom-meta %}
 <!-- hero -->
 <link rel="stylesheet" href="{% static 'assets/css/pages/index/hero.css' %}">
 <!-- About us -->
@@ -19,8 +19,7 @@
 <link rel="stylesheet" href="{% static 'assets/API/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css' %}">
 <!-- Title -->
 <title>Enchanteur - Tienda Online</title>
-{% endblock %}
-</head>
+{% endblock custom-meta%}
 
 <body>
     {% block content %}
