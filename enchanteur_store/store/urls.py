@@ -10,13 +10,6 @@ urlpatterns = [
     path('checkout/', views.checkout, name="checkout"),
     path('singin/', views.singin, name="singin"),
 
-    path('manageView/', views.manageView, name="manageView"),
-    path('addProduct/', views.addProduct, name="addProduct"),
-    path('manageView/', views.manageView, name="manageView"),
-    path('addProduct/', views.addProduct, name="addProduct"),
-    path('editProduct/<int:pk>', views.editProduct, name="editProduct"),
-    path('deleteProduct/<int:pk>', views.deleteProduct, name="deleteProduct"),
-
     path('update_item/', views.updateItem, name="update_item"),
     path('process_order/', views.processOrder, name="process_order"),
 ]

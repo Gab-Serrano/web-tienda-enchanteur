@@ -3,10 +3,10 @@ from store.forms import ProductForm
 from store.models import Product
 from django.contrib import messages
 
-def dashboard(request):
+def staff(request):
     products = Product.objects.all()
     context = {'products': products,}
-    return render(request, 'staff/dashboard.html', context)
+    return render(request, 'staff/staff.html', context)
 
 def addProduct(request):
     context = {}
