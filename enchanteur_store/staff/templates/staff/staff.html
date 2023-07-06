@@ -39,7 +39,7 @@
                                 <td>{{product.name}}</td>
                                 <td>{{product.description}}</td>
                                 <td>${{product.price|intcomma}}</td>
-                                <td><img src="{{product.image.url}}" alt="{{ producto.nombre }}" height="50">
+                                <td><img src="{{product.imageURL}}" alt="{{ producto.nombre }}" height="50">
                                 </td>
                                 <td>
                                     <a class="" href="{% url 'editProduct' pk=product.pk %}">Editar</a>

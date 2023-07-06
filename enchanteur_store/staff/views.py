@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from store.forms import ProductForm
+from staff.forms import addProductForm
 from store.models import Product
 from django.contrib import messages
 
@@ -11,7 +11,7 @@ def staff(request):
 def addProduct(request):
     context = {}
 
-    form = ProductForm(request.POST or None, request.FILES or None)
+    form = addProductForm(request.POST or None, request.FILES or None)
     if request.method == 'POST':
         if form.is_valid():
             form.save()
@@ -20,7 +20,7 @@ def addProduct(request):
             return redirect('addProduct')
         else:
             print(form.errors)  # Imprime los errores en la consola
-            messages.warning(request, 'Error al agregar el producto')
+            messages.error(request, 'Error al agregar el producto')
     
     context['form'] = form
 
@@ -43,7 +43,7 @@ def editProduct(request, pk):
     
     context['form'] = form
 
-    return render(request, 'store/editProduct.html', context)
+    return render(request, 'staff/editProduct.html', context)
 
 def deleteProduct(request, pk):
     producto = get_object_or_404(Product, pk=pk)

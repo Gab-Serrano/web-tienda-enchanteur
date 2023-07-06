@@ -1,4 +1,4 @@
-{% extends 'store/manageView.html' %}
+{% extends 'staff/main.html' %}
 {% load static %}
 
 {% block meta %}
@@ -14,6 +14,8 @@
 <div class="bg-products py-5">
     <div class="container content-container col-6">
         <div class="container">
+
+            <!-- success/error messages -->
             {% if messages %}
             {% for message in messages %}
             <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
@@ -22,16 +24,17 @@
             </div>
             {% endfor %}
             {% endif %}
-            <div id="message-container"></div>
+            <!-- Edition form -->
             <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
                 {% csrf_token %}
                 <div class="form-group mb-3">
-                    <label for="nombre">Nombre del producto:</label>
+                    <label for="name">Nombre del producto:</label>
                     {{ form.name }}
+                    <span id="name-error" class="error-message"></span>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="descripcion">Descripción:</label>
+                    <label for="description">Descripción:</label>
                     {{ form.description }}
                     <span id="description-error" class="error-message"></span>
                 </div>

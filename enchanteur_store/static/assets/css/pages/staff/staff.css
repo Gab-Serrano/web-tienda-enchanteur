@@ -16,20 +16,3 @@
 #description-error {
   color: red;
 }
-
-#message-container {
-  display: none;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.success {
-  background-color: #dff0d8;
-  color: #3c763d;
-}
-
-.error {
-  background-color: #f2dede;
-  color: #a94442;
-}

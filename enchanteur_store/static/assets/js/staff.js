@@ -1,18 +1,29 @@
-function validateForm() {
+/* function validateForm() {
+    var name = document.getElementById('id_name').value;
     var description = document.getElementById('id_description').value;
+
     if (description.length > 200) {
         document.getElementById('description-error').textContent = 'La descripción no puede tener más de 200 caracteres.';
         return false;
     }
     return true;
-}
+} */
 
-function showMessage(message, isSuccess) {
-    const messageContainer = document.getElementById('message-container');
-    messageContainer.innerHTML = message;
-    messageContainer.className = isSuccess ? 'success' : 'error';
-    messageContainer.style.display = 'block';
-    setTimeout(function () {
-        messageContainer.style.display = 'none';
-    }, 3000); // 3 segundos (ajusta este valor según tus preferencias)
-}
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
