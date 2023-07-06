@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,6 +81,7 @@
             document.cookie = 'cart=' + JSON.stringify(cart) + "; domain=; path=/";
         }
     </script>
+    <!-- <script src=" static 'assets/js/tiken.js' "></script> -->
 </head>
 
 <body>
@@ -113,8 +115,7 @@
         </a>
     </header>
     <!-- Navbar -->
-    <nav class="navbar
-navbar-expand-lg navbar-dark" id="navbar-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-top">
         <!-- navbar -->
         <div class="container-fluid px-lg-4">
             <!-- toggle -->
@@ -191,7 +192,8 @@ navbar-expand-lg navbar-dark" id="navbar-top">
                 <!-- offcanvasNavbar - menu-items -->
                 <div class="container-fluid p-0">
                     <div class="sidebar-banner d-flex align-items-center" id="login">
-                        <a href="{% url 'login' %}" class="login-link d-flex justify-content-between align-items-center">
+                        <a href="{% url 'login' %}"
+                            class="login-link d-flex justify-content-between align-items-center">
                             <h5 class="m-0 p-0">Inicia sesión</h5>
                         </a>
                     </div>
@@ -309,7 +311,7 @@ navbar-expand-lg navbar-dark" id="navbar-top">
     <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
     <script src="{% static 'assets/js/cart.js' %}"></script>
-    {% block customScripts  %}
+    {% block customScripts %}
     {% endblock customScripts %}
 </body>
 

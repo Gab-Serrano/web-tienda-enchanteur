@@ -37,10 +37,15 @@
   font-style: normal;
 }
 
+.nav-link:hover {
+  color: var(--text-color-primary);
+  text-decoration: underline;
+}
+
 .nav-link#nav-link-cart:hover {
-    text-decoration: none;
-  }
-  
-  .nav-link#nav-link-cart:hover #cart-link-text {
-    text-decoration: underline;
-  }
+  text-decoration: none;
+}
+
+.nav-link#nav-link-cart:hover #cart-link-text {
+  text-decoration: underline;
+}

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'home.apps.HomeConfig',    
     'store.apps.StoreConfig',
+    'staff.apps.StaffConfig',
 ]
 
 MIDDLEWARE = [
