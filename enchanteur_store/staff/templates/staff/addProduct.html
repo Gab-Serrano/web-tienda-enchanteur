@@ -1,4 +1,4 @@
-{% extends 'store/manageView.html' %}
+{% extends 'staff/main.html' %}
 {% load static %}
 
 {% block meta %}
@@ -55,3 +55,6 @@
     </div>
 </div>
 {% endblock content %}
+{% block customScripts %}
+    <script src=" {% static 'assets/js/staff.js' %} "></script>
+{% endblock customScripts %}

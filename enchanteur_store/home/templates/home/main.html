@@ -61,7 +61,7 @@
                 </div>
                 <div class="header-contact accesoStaff col">
                     {% if user.is_authenticated %}
-                    <a href="{% url 'manageView' %}" class="icon-header bi bi-person">Acceso Staff</a>
+                    <a href="{% url 'staff' %}" class="icon-header bi bi-person">Acceso Staff</a>
                     {% else %}
                     <a href="{% url 'admin:index' %}" class="icon-header bi bi-person">Acceso Staff</a>
                     {% endif %}

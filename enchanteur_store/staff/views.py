@@ -24,7 +24,7 @@ def addProduct(request):
     
     context['form'] = form
 
-    return render(request, 'store/addProduct.html', context)
+    return render(request, 'staff/addProduct.html', context)
 
 def editProduct(request, pk):
     context = {}
