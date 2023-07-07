@@ -40,7 +40,8 @@ def cookieCart(request):
 def guestOrder(request, data):
     print('User is not logged in')
     print('COOKIES:', request.COOKIES)
-    name = data['form']['name']
+    first_name = data['form']['first_name']
+    last_name = data['form']['last_name']
     email = data['form']['email']
 
     cookieData = cookieCart(request)
@@ -49,7 +50,8 @@ def guestOrder(request, data):
     customer, created = Customer.objects.get_or_create(
             email = email,
         )
-    customer.name = name
+    customer.first_name = first_name
+    customer.last_name = last_name
     customer.save()
 
     order = Order.objects.create(
