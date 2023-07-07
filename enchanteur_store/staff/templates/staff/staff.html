@@ -21,6 +21,15 @@
         <!-- Productos -->
         <div class="col-12">
             <div class="box-element">
+                <!-- success/error messages -->
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
                 <h1 class="text-light">Lista de Productos</h1>
                 <div class="table-container mb-3">
                     <table class="table table-bordered m-0">
@@ -42,8 +51,10 @@
                                 <td><img src="{{product.imageURL}}" alt="{{ producto.nombre }}" height="50">
                                 </td>
                                 <td>
-                                    <a class="" href="{% url 'editProduct' pk=product.pk %}">Editar</a>
-                                    <a class="" href="{% url 'deleteProduct' pk=product.pk %}">Eliminar</a>
+                                    <div class="d-flex justify-content-around ">
+                                        <a class="" href="{% url 'editProduct' pk=product.pk %}"><i class="staff-icon bi bi-pencil-square"></i></a>
+                                        <a class="" href="{% url 'deleteProduct' pk=product.pk %}"><i class="staff-icon bi bi-trash3-fill"></i></a>
+                                    </div>
                             </tr>
                             {% endfor %}
                         </tbody>

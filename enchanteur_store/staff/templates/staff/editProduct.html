@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block meta %}
-{% endblock %}
+{% endblock meta %}
 
 {% block encabezado %}
 <h1 class="text-center title-dark">
-    Editar productos
+    Editar producto: {{ form.name.value }}
 </h1>
 {% endblock encabezado %}
 
@@ -14,44 +14,55 @@
 <div class="bg-products py-5">
     <div class="container content-container col-6">
         <div class="container">
-
-            <!-- success/error messages -->
-            {% if messages %}
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
-            {% endif %}
             <!-- Edition form -->
-            <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <form class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
                 {% csrf_token %}
-                <div class="form-group mb-3">
-                    <label for="name">Nombre del producto:</label>
+                <div class="form-floating mb-3">
                     {{ form.name }}
-                    <span id="name-error" class="error-message"></span>
+                    <label for="id_name">Nombre del producto</label>
+                    <div class="valid-feedback">
+                        ¡Todo bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un nombre al producto.
+                    </div>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="description">Descripción:</label>
+                <div class="form-floating mb-3">
                     {{ form.description }}
-                    <span id="description-error" class="error-message"></span>
+                    <label for="id_description">Descripción</label>
+                    <div class="valid-feedback">
+                        ¡Todo bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción al producto.
+                    </div>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="precio">Precio:</label>
+                <div class="form-floating mb-3">
                     {{ form.price }}
+                    <label for="id_price">Precio</label>
+                    <div class="valid-feedback">
+                        ¡Todo bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un precio al producto.
+                    </div>
                 </div>
-
                 <div class="form-group mb-3">
-                    <label for="imagen">Subir imagen:</label>
-                    {{ form.image }}
+                    <div>
+                        <h6>Imagen actual</h6>
+                        <img src="{{ image_url }}" class="img-fluid w-50" alt="Imagen del producto">
+                    </div>
+                    <div class="mt-2">
+                        <label for="id_image" class="form-label">Elige una nueva imagen</label>
+                        <input class="form-control" type="file" id="formFile" name="id_image">
+                    </div>
                 </div>
-
                 <button type="submit" class="btn btn-dark my-2 lead-light">Guardar cambios</button>
             </form>
         </div>
     </div>
+</div>
 </div>
 {% endblock content %}

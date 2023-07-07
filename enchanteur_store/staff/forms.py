@@ -3,7 +3,7 @@ from store.models import Product
 from django.forms import ClearableFileInput
 
 
-class addProductForm(forms.ModelForm):
+class ProductForm(forms.ModelForm):
     #class Product(models.Model):
     #   name = models.CharField(max_length = 50, null=True)
     #   description = models.CharField(max_length = 200, null=True)
@@ -19,3 +19,4 @@ class addProductForm(forms.ModelForm):
             'price': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el precio del producto', 'required': 'True', 'min': '0'}),
             'image': ClearableFileInput(attrs={'class': 'form-control', 'type':'file','accept': 'image/*', 'required': 'True'}),
         }
+    
