@@ -16,39 +16,3 @@
 body {
   background-color: var(--bg-color-primary);
 }
-
-.nav-link:hover {
-  color: var(--text-color-primary);
-  text-decoration: underline;
-}
-
-.table-container {
-  height: 400px;
-  overflow: auto;
-  background-color: var(--bg-color-secondary);
-}
-
-.table-container table {
-  border: 1px solid #000;
-}
-
-#description-error {
-  color: red;
-}
-
-#message-container {
-    display: none;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.success {
-    background-color: #dff0d8;
-    color: #3c763d;
-}
-
-.error {
-    background-color: #f2dede;
-    color: #a94442;
-}

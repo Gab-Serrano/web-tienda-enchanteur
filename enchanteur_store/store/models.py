@@ -10,19 +10,20 @@ class Customer(models.Model):
         return self.name
 
 class Product(models.Model):
-    name = models.CharField(max_length = 200, null=True)
+    name = models.CharField(max_length = 50, null=True)
     description = models.CharField(max_length = 200, null=True)
     price = models.IntegerField()
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to='products-img/')
+    featured = models.BooleanField(default=False, null=True, blank=False)
 
-    def __str__(self):
-        return self.name
-    
     @property
     def imageURL(self):
-        try:
-            url = self.image.url
-        except:
+        if self.image:
+            try:
+                url = self.image.url
+            except:
+                url = ''
+        else:
             url = ''
         return url
 

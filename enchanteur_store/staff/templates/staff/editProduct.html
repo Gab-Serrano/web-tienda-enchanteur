@@ -1,0 +1,76 @@
+{% extends 'staff/main.html' %}
+{% load static %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block encabezado %}
+<h1 class="text-center title-dark">
+    Editar producto: {{ form.name.value }}
+</h1>
+{% endblock encabezado %}
+
+{% block content %}
+<div class="bg-products py-5">
+    <div class="container content-container col-6">
+        <div class="container">
+            <!-- Edition form -->
+            <form class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                    {{ form.name }}
+                    <label for="id_name">Nombre del producto</label>
+                    <div class="valid-feedback">
+                        ¡Todo bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un nombre al producto.
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    {{ form.description }}
+                    <label for="id_description">Descripción</label>
+                    <div class="valid-feedback">
+                        ¡Todo bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción al producto.
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    {{ form.price }}
+                    <label for="id_price">Precio</label>
+                    <div class="valid-feedback">
+                        ¡Todo bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un precio al producto.
+                    </div>
+                </div>
+                <div class="form-check mb-3">
+                    {{ form.featured }}
+                    <label class="form-check-label" for="id_featured">¿Marcar como destacado?</label>
+
+                    <div class="valid-feedback">
+                        ¡Todo bien!
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div>
+                        <h6>Imagen actual</h6>
+                        <img src="{{ image_url }}" class="img-fluid w-50" alt="Imagen del producto">
+                    </div>
+                    <div class="mt-2">
+                        <label for="id_image" class="form-label">Elige una nueva imagen</label>
+                        <input class="form-control" type="file" id="formFile" name="id_image">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark my-2 lead-light">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

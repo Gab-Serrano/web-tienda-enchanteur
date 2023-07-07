@@ -1,14 +1,37 @@
+(() => {
+    console.log('checkout.js loaded');
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+    console.log(forms);
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        event.preventDefault()
+        if (!form.checkValidity()) {
+          event.stopPropagation()
+        }
+        else {
+            document.getElementById('form-button').classList.add("hidden");
+            document.getElementById('payment-info').classList.remove("hidden");
+        }
+  
+        form.classList.add('was-validated')
+        console.log(form.classList);
+      }, false)
+    })
+  })()
+
 if (user != 'AnonymousUser') {
     document.getElementById('user-info').innerHTML = ''
 }
 
-var form = document.getElementById('form')
+/* var form = document.getElementById('form')
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-    console.log('Form Submitted...')
     document.getElementById('form-button').classList.add("hidden");
     document.getElementById('payment-info').classList.remove("hidden");
-})
+}) */
 
 document.getElementById('make-payment').addEventListener('click', function (e) {
     submitFormData()
