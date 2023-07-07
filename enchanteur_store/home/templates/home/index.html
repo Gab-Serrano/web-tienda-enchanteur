@@ -31,7 +31,7 @@
         <h1 class="hero-title title-light">Descubre el arte de la magia</h1>
         <h6 class="hero-lead lead-light">Encuentra el mazo perfecto para tus trucos y añade un toque de magia a
             tu vida.</h6>
-        <button class="hero-btn">Comprar ahora</button>
+        <a href="{% url 'store' %}" class="hero-btn">Comprar ahora</a>
     </div>
     </div>
 </section>
@@ -42,11 +42,10 @@
         <div class="img-about-us">
         </div>
         <p class="text-center px-4 lead-dark">
-            En nuestra tienda de mazos de cartas y trucos de magia, nos apasiona ofrecer productos de alta
-            calidad para magos de todos los niveles. <br> ¡Descubre la magia con nosotros!
+            En nuestra tienda de mazos de cartas y trucos de magia, nos apasiona ofrecer productos de alta calidad para magos de todos los niveles. <br> ¡Descubre la magia con nosotros!
         </p>
-        <button type="button" class="btn btn-dark mx-auto btn-saber-mas">Saber más
-        </button>
+        <a href="{% url 'aboutUs' %}" type="button" class="btn btn-dark mx-auto btn-saber-mas">Saber más
+        </a>
     </div>
 </section>
 <!-- Productos-->
