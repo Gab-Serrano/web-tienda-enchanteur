@@ -35,14 +35,22 @@ def editProduct(request, pk):
     context = {}
     obj = get_object_or_404(Product, pk=pk)
     form = ProductForm(request.POST or None, request.FILES or None, instance=obj)
+
     image_url = obj.imageURL
     context['image_url'] = image_url
+
     if request.method == "POST":
         if form.is_valid():
             objectForm = form.save(commit=False)
+
             file = request.FILES.get('id_image')
             if file:
                 objectForm.image = file
+            
+            featured = request.POST.get('featured')
+            objectForm.featured = featured == 'on'
+            print(objectForm.featured)
+
             objectForm.save()
             messages.success(request, "Producto editado correctamente")
             context["success_message"] = True  # Agregar esta línea

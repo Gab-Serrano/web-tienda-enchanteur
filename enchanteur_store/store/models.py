@@ -14,6 +14,7 @@ class Product(models.Model):
     description = models.CharField(max_length = 200, null=True)
     price = models.IntegerField()
     image = models.ImageField(null=True, blank=True, upload_to='products-img/')
+    featured = models.BooleanField(default=False, null=True, blank=False)
 
     @property
     def imageURL(self):

@@ -37,6 +37,7 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Descripción</th>
+                                <th>Destacado</th>
                                 <th>Precio</th>
                                 <th>Imagen</th>
                                 <th>Acciones</th>
@@ -47,6 +48,13 @@
                             <tr>
                                 <td>{{product.name}}</td>
                                 <td>{{product.description}}</td>
+                                <td>
+                                    {% if product.featured %}
+                                    <i class="bi bi-check-circle" style="color:green"></i>
+                                    {% else %}
+                                    <i class="bi bi-x-circle" style="color: brown;"></i>
+                                    {% endif %}
+                                </td>
                                 <td>${{product.price|intcomma}}</td>
                                 <td><img src="{{product.imageURL}}" alt="{{ producto.nombre }}" height="50">
                                 </td>

@@ -1,5 +1,6 @@
 {% extends 'home/main.html' %}
 {% load static %}
+{% load humanize %}
 
 {% block custom-meta %}
 <!-- hero -->
@@ -51,70 +52,39 @@
 <!-- Productos-->
 <section class="products container-fluid text-center" id="seccion-productos">
     <h1 class="title-dark title-responsive">Productos Seleccionados</h1>
+
     <!-- Selección para movil -->
     <div class="products-content container-fluid d-md-none">
-        <a href="#" class="card text-bg-dark">
-            <img src="{% static 'assets/img/prod-1.jpg' %}" alt="Producto seleccionado 1" class="card-img">
+        {% for product in products %}
+        {% if product.featured == True %}
+        <a href="{% url 'store' %}" class="card text-bg-dark">
+            <img src="{{product.image.url}}" alt="" class="card-img">
             <div class="card-img-overlay">
-                <h5 class="card-title">Baraja Citizens</h5>
+                <h5 class="card-title">{{product.name}}</h5>
                 <p class="card-text card-desc">Baraja de cartas</p>
-                <p class="card-text precio">$40.990</p>
+                <p class="card-text precio">${{product.price|intcomma}}</p>
             </div>
         </a>
-        <a href="#" class="card text-bg-dark">
-            <img src="{% static 'assets/img/prod-2.jpg' %}" alt="Producto seleccionado 2" class="card-img img-fluid">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Baraja Monarchs</h5>
-                <p class="card-text card-desc">Baraja de cartas premium</p>
-                <p class="card-text precio">$62.990</p>
-            </div>
-        </a>
-        <a href="#" class="card text-bg-dark">
-            <img src="{% static 'assets/img/prod-3.jpg' %}" alt="Producto seleccionado 3" class="card-img">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Baraja de cartas Hudson</h5>
-                <p class="card-text card-desc">Baraja de magia</p>
-                <p class="card-text precio precio-tachado
-                    ">$40.990</p>
-                <p class="card-text precio oferta">$35.990</p>
-            </div>
-        </a>
+        {% endif %}
+        {% endfor %}
     </div>
     <!-- Despliegue de carousel -->
     <div id="carouselProducts" class="owl-carousel owl-theme d-none d-md-flex">
-        <div class="item">
-            <a href="#" class="card text-bg-dark">
-                <img src="{% static 'assets/img/prod-1.jpg' %}" alt="Producto seleccionado 1" class="card-img">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Baraja Citizens</h5>
-                    <p class="card-text card-desc">Baraja de cartas</p>
-                    <p class="card-text precio">$40.990</p>
-                </div>
-            </a>
-        </div>
-        <div class="item">
-            <a href="#" class="card text-bg-dark">
-                <img src="{% static 'assets/img/prod-2.jpg' %}" alt="Producto seleccionado 2"
-                    class="card-img img-fluid">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Baraja Monarchs</h5>
-                    <p class="card-text card-desc">Baraja de cartas premium</p>
-                    <p class="card-text precio">$62.990</p>
-                </div>
-            </a>
-        </div>
-        <div class="item">
-            <a href="#" class="card text-bg-dark">
-                <img src="{% static 'assets/img/prod-3.jpg' %}" alt="Producto seleccionado 3" class="card-img">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Baraja de cartas Hudson</h5>
-                    <p class="card-text card-desc">Baraja de magia</p>
-                    <p class="card-text precio precio-tachado
-                            ">$40.990</p>
-                    <p class="card-text precio oferta">$35.990</p>
-                </div>
-            </a>
-        </div>
+        {% for product in products %}
+        {% if product.featured == True %}
+            <div class="item">
+                <a href="{% url 'store' %}" class="card text-bg-dark">
+                    <img src="{{product.image.url}}" alt="" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text card-desc">Baraja de cartas</p>
+                        <p class="card-text precio">${{product.price|intcomma}}</p>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+        {% endfor %}
+    
     </div>
     <a href="{% url 'store' %}" class="btn btn-dark mx-auto btn-saber-mas align-items-center">Ver todos</a>
 </section>
