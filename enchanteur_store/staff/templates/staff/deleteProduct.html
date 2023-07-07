@@ -1,0 +1,50 @@
+{% extends 'staff/main.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block encabezado %}
+<h1 class="text-center title-dark">
+  Eliminar producto: {{ product.name }}
+</h1>
+{% endblock encabezado %}
+
+{% block content %}
+<div class="bg-products py-5">
+  <div class="container box-element p-5">
+    <h4 class="text-light">¿Desea eliminar este producto?</h4>
+    <div class="table-container-delete p-5">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>${{product.price|intcomma}}</td>
+            <td><img src="{{product.imageURL}}" alt="{{ producto.nombre }}" height="100"></td>
+          </tr>
+        </tbody>
+      </table>
+      <form class="d-flex justify-content-center" method="post">
+        {% csrf_token %}
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <button type="submit" class="btn btn-danger btn-block">Eliminar</button>
+          </div>
+          <div class="col-6">
+            <a href="{% url 'staff' %}" class="btn btn-secondary btn-block">Cancelar</a>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

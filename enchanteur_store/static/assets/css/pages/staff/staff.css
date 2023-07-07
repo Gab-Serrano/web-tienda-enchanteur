@@ -1,0 +1,36 @@
+.bg-staff{
+	width: 100%;
+	background-color: var(--bg-color-secondary);
+}
+
+.table-container {
+  height: 400px;
+  overflow: auto;
+  background-color: var(--bg-color-secondary);
+}
+
+.table-container table {
+  border: 1px solid #000;
+}
+
+#description-error {
+  color: red;
+}
+
+.table-container-delete {
+  overflow: auto;
+  background-color: var(--bg-color-secondary);
+}
+
+.table-container-delete table {
+  border: 1px solid #000;
+}
+
+.staff-icon {
+  color: var(--bg-color-primary);
+  font-size: 1.2rem;
+}
+
+.staff-icon:hover {
+  color: var(--text-color-tertiary);
+}

@@ -1,4 +1,4 @@
-{% extends 'store/main.html' %}
+{% extends 'home/main.html' %}
 {% load static %}
 {% load humanize %}
 {% block content %}
@@ -17,17 +17,30 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="box-element mb-3" id="form-wrapper">
-                <form id="form" method="post">{% csrf_token %}
+                <form class="needs-validation" id="form" method="post" novalidate>
+                    {% csrf_token %}
                     <div class="mb-4" id="user-info">
                         <h4 class="text-light">Datos del receptor</h4>
                         <div class="form-field">
                             <label class="text-light" for="name">Nombre completo</label>
                             <input required class="form-control" type="text" name="name" placeholder="Harry Potter">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su nombre completo.
+                            </div>
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="email">Correo electrónico</label>
                             <input required class="form-control" type="email" name="email"
                                 placeholder="harry.potter@gryffindor.hw">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su correo en el formato correcto.
+                            </div>
                         </div>
                     </div>
 
@@ -35,23 +48,53 @@
                         <h4 class="text-light">Información de envío</h4>
                         <div class="form-field">
                             <label class="text-light" for="address">Dirección</label>
-                            <input class="form-control" type="text" name="address" placeholder="Privet Drive 4">
+                            <input required class="form-control" type="text" name="address" placeholder="Privet Drive 4">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su dirección.
+                            </div>
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="city">Ciudad</label>
-                            <input class="form-control" type="text" name="city" placeholder="Little Whinging">
+                            <input required class="form-control" type="text" name="city" placeholder="Little Whinging">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su ciudad.
+                            </div>
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="state">Región/Estado</label>
-                            <input class="form-control" type="text" name="state" placeholder="Surrey">
+                            <input required class="form-control" type="text" name="state" placeholder="Surrey">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su estado o región.
+                            </div>
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="country">País</label>
-                            <input class="form-control" type="text" name="country" placeholder="Inglaterra">
+                            <input required class="form-control" type="text" name="country" placeholder="Inglaterra">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su país.
+                            </div>
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="zipcode">Zipcode</label>
-                            <input class="form-control" type="text" name="zipcode" placeholder="2450000">
+                            <input required class="form-control" type="text" name="zipcode" placeholder="2450000">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su código zip.
+                            </div>
                         </div>
                     </div>
                     <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
