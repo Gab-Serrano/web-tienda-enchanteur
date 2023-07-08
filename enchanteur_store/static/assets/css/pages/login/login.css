@@ -1,7 +1,4 @@
-.cuerpo{
-    color: var(--text-color-primary);
-    padding-bottom: 4rem;
-}
-body{
-    background-color: var(--bg-color-primary);
+.form-container{
+    background-color: var(--bg-color-secondary);
+    border-radius: 10px;
 }

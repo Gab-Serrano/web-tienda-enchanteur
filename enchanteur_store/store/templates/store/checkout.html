@@ -22,8 +22,18 @@
                     <div class="mb-4" id="user-info">
                         <h4 class="text-light">Datos del receptor</h4>
                         <div class="form-field">
-                            <label class="text-light" for="name">Nombre completo</label>
-                            <input required class="form-control" type="text" name="name" placeholder="Harry Potter">
+                            <label class="text-light" for="first_name">Nombre</label>
+                            <input required class="form-control" type="text" name="first_name" placeholder="Harry">
+                            <div class="valid-feedback">
+                                ¡Todo bien!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese su nombre completo.
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label class="text-light" for="last_name">Apellido</label>
+                            <input required class="form-control" type="text" name="last_name" placeholder="Potter">
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>

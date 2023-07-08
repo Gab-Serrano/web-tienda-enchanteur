@@ -6,8 +6,6 @@ def cookieCart(request):
         cart = json.loads(request.COOKIES['cart'])
     except:
         cart = {}
-
-    print('CART: ', cart)
     items = []
     order = {'get_cart_total':0, 'get_cart_items':0}
     cartItems = order['get_cart_items']
@@ -38,9 +36,8 @@ def cookieCart(request):
     return {'cartItems': cartItems, 'order': order, 'items': items}
 
 def guestOrder(request, data):
-    print('User is not logged in')
-    print('COOKIES:', request.COOKIES)
-    name = data['form']['name']
+    first_name = data['form']['first_name']
+    last_name = data['form']['last_name']
     email = data['form']['email']
 
     cookieData = cookieCart(request)
@@ -49,7 +46,8 @@ def guestOrder(request, data):
     customer, created = Customer.objects.get_or_create(
             email = email,
         )
-    customer.name = name
+    customer.first_name = first_name
+    customer.last_name = last_name
     customer.save()
 
     order = Order.objects.create(
@@ -65,32 +63,3 @@ def guestOrder(request, data):
                 quantity = item['quantity'],
             )
     return customer, order
-
-"""
-        print('User is not logged in')
-        print('COOKIES:', request.COOKIES)
-        name = data['form']['name']
-        email = data['form']['email']
-
-        cookieData = cookieCart(request)
-        items = cookieData['items']
-
-        customer, created = Customer.objects.get_or_create(
-                email = email,
-            )
-        customer.name = name
-        customer.save()
-
-        order = Order.objects.create(
-                customer = customer,
-                complete = False,
-            )
-        
-        for item in items:
-            product = Product.objects.get(id = item['product']['id'])
-            orderItem = OrderItem.objects.create(
-                    product = product,
-                    order = order,
-                    quantity = item['quantity'],
-                )
-"""
