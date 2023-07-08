@@ -1,0 +1,171 @@
+{% extends 'home/main.html' %}
+{% load static %}
+
+{% block custom-meta %}
+<link rel="stylesheet" href="{% static 'assets/css/pages/login/login.css' %}">
+{% endblock custom-meta%}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-light text-center m-3">Únete al Círculo Magico</h1>
+    <h4 class="text-light text-center m-3">Regístrate para tener Acceso Exclusivo y Actualizaciones</h4>
+    <div class="row justify-content-center my-4">
+        <div class="col-11 form-container p-2">
+            <form class="row my-3 justify-content-center needs-validation" method="post" novalidate>
+                {% csrf_token %}
+                <h4 class="text-dark text-center"> Datos de la cuenta</h4>
+                <div class="form-group col-5">
+                    <div class="form-floating my-3">
+                        {{ form.username }}
+                        <label for="id_username">Nombre de usuario</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu nombre de usuario.
+                        </div>
+                    </div>
+                    <div class="form-floating my-3">
+                        {{ form.password1 }}
+                        <label for="id_password1">Contraseña</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa una contraseña.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <div class="form-floating my-3">
+                        {{ form.email }}
+                        <label for="id_email">Correo electrónico</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu correo electrónico.
+                        </div>
+                    </div>
+                    <div class="form-floating my-3">
+                        {{ form.password2 }}
+                        <label for="id_password2">Confirmar contraseña</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor confirma tu contraseña.
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-dark text-center"> Datos personales</h4>
+                <div class="form-group col-5">
+                    <div class="form-floating my-3">
+                        {{ form.first_name }}
+                        <label for="id_username">Nombre</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu nombre.
+                        </div>
+                    </div>
+                    <div class="form-floating my-3">
+                        {{ form.date_of_birth }}
+                        <label for="id_date_of_birth">Fecha de nacimiento</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu fecha de nacimiento.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <div class="form-floating my-3">
+                        {{ form.last_name }}
+                        <label for="id_last_name">Apellido</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu apellido.
+                        </div>
+                    </div>
+                    <div class="form-floating my-3">
+                        {{ form.phone }}
+                        <label for="id_phone">Número de teléfono</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu número de teléfono.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-10">
+                    <div class="form-floating my-2">
+                        {{ form.address }}
+                        <label for="id_address">Dirección</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu dirección.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <div class="form-floating my-3">
+                        {{ form.city }}
+                        <label for="id_city">Ciudad</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu ciudad.
+                        </div>
+                    </div>
+                    <div class="form-floating my-3">
+                        {{ form.country }}
+                        <label for="id_country">País</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor selecciona tu país.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <div class="form-floating my-3">
+                        {{ form.state }}
+                        <label for="id_state">Estado/Región</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor selecciona tu estado/región.
+                        </div>
+                    </div>
+                    <div class="form-floating my-3">
+                        {{ form.zip_code }}
+                        <label for="id_zip_code">Código postal</label>
+                        <div class="valid-feedback">
+                            ¡Todo bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu código postal.
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark col-4 my-3">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block customScripts %}
+<script src="{% static 'assets/js/login.js' %}"></script>
+{% endblock customScripts %}

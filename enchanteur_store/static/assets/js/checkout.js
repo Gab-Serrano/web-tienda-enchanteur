@@ -1,9 +1,7 @@
 (() => {
-    console.log('checkout.js loaded');
   
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
-    console.log(forms);
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
@@ -17,7 +15,6 @@
         }
   
         form.classList.add('was-validated')
-        console.log(form.classList);
       }, false)
     })
   })()
@@ -41,7 +38,8 @@ function submitFormData() {
     console.log('Payment button clicked')
 
     var userFormData = {
-        'name': null,
+        'first_name': null,
+        'last_name': null,
         'email': null,
         'total': total,
     }
@@ -61,7 +59,8 @@ function submitFormData() {
     shippingInfo.zipcode = form.zipcode.value
 
     if (user == 'AnonymousUser') {
-        userFormData.name = form.name.value
+        userFormData.first_name = form.first_name.value
+        userFormData.last_name = form.last_name.value
         userFormData.email = form.email.value
     }
     console.log('Shipping Info:', shippingInfo)

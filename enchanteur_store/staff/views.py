@@ -23,7 +23,6 @@ def addProduct(request):
             context["success_message"] = True  # Agregar esta línea
             return redirect("staff")
         else:
-            print(form.errors)  # Imprime los errores en la consola
             messages.error(request, "Error al agregar el producto")
 
     context["form"] = form
@@ -49,14 +48,12 @@ def editProduct(request, pk):
             
             featured = request.POST.get('featured')
             objectForm.featured = featured == 'on'
-            print(objectForm.featured)
 
             objectForm.save()
             messages.success(request, "Producto editado correctamente")
             context["success_message"] = True  # Agregar esta línea
             return redirect("staff")
         else:
-            print(form.errors)  # Imprime los errores en la consola
             messages.error(request, "Error al editar el producto")
 
     context["form"] = form

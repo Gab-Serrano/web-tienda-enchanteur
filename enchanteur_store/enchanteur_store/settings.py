@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',    
     'store.apps.StoreConfig',
     'staff.apps.StaffConfig',
+    'login.apps.LoginConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ TEMPLATES = [
         },
     },
 ]
-LOGIN_REDIRECT_URL = 'store'
+LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 WSGI_APPLICATION = 'enchanteur_store.wsgi.application'
 

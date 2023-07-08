@@ -3,11 +3,22 @@ from django.contrib.auth.models import User
 
 class Customer(models.Model):
     user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
-    name = models.CharField(max_length = 200, null=True)
+    first_name = models.CharField(max_length = 200, null=True)
+    last_name = models.CharField(max_length = 200, null=True)
     email = models.CharField(max_length = 200, null=True)
 
     def __str__(self):
-        return self.name
+        return str(self.id)
+
+def create_customer(sender, instance, created, **kwargs):
+    if created:
+        Customer.objects.create(user=instance)
+
+def save_customer(sender, instance, **kwargs):
+    instance.customer.save()
+
+models.signals.post_save.connect(create_customer, sender=User)
+models.signals.post_save.connect(save_customer, sender=User)
 
 class Product(models.Model):
     name = models.CharField(max_length = 50, null=True)
