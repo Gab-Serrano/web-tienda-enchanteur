@@ -8,21 +8,6 @@ from django.shortcuts import redirect, get_object_or_404, reverse
 from django.contrib import messages
 import datetime
 
-def login(request):
-    cartCount (request)
-    context = {'cartItems': cartCount (request)}
-    return render(request, 'store/login.html', context)
-
-def singin(request):
-    cartCount (request)
-    context = {'cartItems': cartCount (request)}
-    return render(request, 'store/singin.html', context)
-
-def contact(request):
-    cartCount (request)
-    context = {'cartItems': cartCount (request)}
-    return render(request, 'store/contact.html', context)
-
 def store(request):
     if request.user.is_authenticated:
         customer = request.user.customer
@@ -73,7 +58,10 @@ def processOrder(request):
     if request.user.is_authenticated:
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer = customer, complete = False)
- 
+        items = order.orderitem_set.all()
+        customer.first_name = request.user.first_name
+        customer.last_name = request.user.last_name
+        customer.email = request.user.email
     else:
         customer, order = guestOrder(request, data)
     
@@ -83,6 +71,7 @@ def processOrder(request):
     if total == order.get_cart_total:
             order.complete = True
     order.save()
+    customer.save()
 
     ShippingAddress.objects.create(
                 customer = customer,

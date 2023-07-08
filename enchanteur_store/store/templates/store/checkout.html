@@ -23,7 +23,12 @@
                         <h4 class="text-light">Datos del receptor</h4>
                         <div class="form-field">
                             <label class="text-light" for="first_name">Nombre</label>
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="text" name="first_name"
+                                value="{{user.first_name}}" placeholder="Harry">
+                            {% else %}
                             <input required class="form-control" type="text" name="first_name" placeholder="Harry">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>
@@ -33,7 +38,12 @@
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="last_name">Apellido</label>
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="text" name="last_name"
+                                value="{{user.last_name}}" placeholder="Potter">
+                            {% else %}
                             <input required class="form-control" type="text" name="last_name" placeholder="Potter">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>
@@ -43,8 +53,11 @@
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="email">Correo electrónico</label>
-                            <input required class="form-control" type="email" name="email"
-                                placeholder="harry.potter@gryffindor.hw">
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="email" name="email" value="{{user.email}}" placeholder="harry.potter@gryffindor.hw">
+                            {% else %}
+                            <input required class="form-control" type="email" name="email" placeholder="harry.potter@gryffindor.hw">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>
@@ -58,7 +71,12 @@
                         <h4 class="text-light">Información de envío</h4>
                         <div class="form-field">
                             <label class="text-light" for="address">Dirección</label>
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="text" name="address"
+                                value="{{user.profile.address}}" placeholder="Privet Drive 4">
+                            {% else %}
                             <input required class="form-control" type="text" name="address" placeholder="Privet Drive 4">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>
@@ -68,7 +86,11 @@
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="city">Ciudad</label>
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="text" name="city" value="{{user.profile.city}}" placeholder="Little Whinging">
+                            {% else %}
                             <input required class="form-control" type="text" name="city" placeholder="Little Whinging">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>
@@ -78,7 +100,11 @@
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="state">Región/Estado</label>
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="text" name="state" value="{{user.profile.state}}" placeholder="Surrey">
+                            {% else %}
                             <input required class="form-control" type="text" name="state" placeholder="Surrey">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>
@@ -88,7 +114,11 @@
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="country">País</label>
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="text" name="country" value="{{user.profile.country}}" placeholder="Inglaterra">
+                            {% else %}
                             <input required class="form-control" type="text" name="country" placeholder="Inglaterra">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>
@@ -98,7 +128,11 @@
                         </div>
                         <div class="form-field">
                             <label class="text-light" for="zipcode">Zipcode</label>
+                            {% if user.is_authenticated %}
+                            <input required class="form-control" type="text" name="zipcode" value="{{user.profile.zipcode}}" placeholder="2450000">
+                            {% else %}
                             <input required class="form-control" type="text" name="zipcode" placeholder="2450000">
+                            {% endif %}
                             <div class="valid-feedback">
                                 ¡Todo bien!
                             </div>

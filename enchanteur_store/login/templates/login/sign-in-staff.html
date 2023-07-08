@@ -1,0 +1,51 @@
+{% extends 'home/main.html' %}
+{% load static %}
+
+{% block custom-meta %}
+<link rel="stylesheet" href="{% static 'assets/css/pages/sign-in/sign-in.css' %}">
+{% endblock custom-meta %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-light text-center m-3">Acceso Staff</h1>
+    <h4 class="text-light text-center m-3">Inicia sesión para administrar el contenido</h4>
+    <div class="row justify-content-center my-4">
+        <div class="row form-container p-2 content-container justify-content-center">
+            <form class="col-7 my-3 needs-validation text-center" method="post" novalidate>
+                {% csrf_token %}
+                <h4 class="text-dark text-center"> Ingresa tus datos </h4>
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" required>
+                    <label for="username" class="form-label">Usuario</label>
+                    <div class="invalid-feedback">
+                        Por favor ingresa tu usuario
+                    </div>
+                </div>
+                <div class="my-3 form-floating">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+                    <label for="password" class="form-label">Contraseña</label>
+                    <div class="invalid-feedback">
+                        Por favor ingresa tu contraseña
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark my-3 btn-submit-sign-in">Ingresar</button>
+            </form>
+            <div class="col-7 my-3 text-center">
+                <h6 class="text-dark text-center m-1"> ¿No tienes cuenta? </h6>
+                <a href="{% url 'register' %}" class="btn btn-outline-dark my-1">Registrate</a>
+        </div>
+    </div>
+</div>   
+{% endblock content %}
+
+{% block custom-js %}
+<script src="{% static 'assets/js/pages/sign-in/sign-in.js' %}"></script>
+{% endblock custom-js %}

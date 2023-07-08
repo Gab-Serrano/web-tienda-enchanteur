@@ -20,7 +20,7 @@
   })()
 
 if (user != 'AnonymousUser') {
-    document.getElementById('user-info').innerHTML = ''
+    document.getElementById('user-info').classList.add("hidden");
 }
 
 /* var form = document.getElementById('form')
@@ -63,8 +63,11 @@ function submitFormData() {
         userFormData.last_name = form.last_name.value
         userFormData.email = form.email.value
     }
-    console.log('Shipping Info:', shippingInfo)
-    console.log('User Info:', userFormData)
+    else {
+        userFormData.first_name = form.first_name
+        userFormData.last_name = form.last_name
+        userFormData.email = form.email
+    }
 
     var url = "/process_order/"
     fetch(url, {

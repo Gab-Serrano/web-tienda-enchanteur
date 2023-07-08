@@ -2,8 +2,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from staff.forms import ProductForm
 from store.models import Product
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
 
+def is_staff(user):
+    return user.is_staff
 
+@login_required(login_url='signin_staff')
+@user_passes_test(is_staff, login_url='signin_staff')
 def staff(request):
     products = Product.objects.all()
     context = {
@@ -11,7 +16,8 @@ def staff(request):
     }
     return render(request, "staff/staff.html", context)
 
-
+@login_required(login_url='signin_staff')
+@user_passes_test(is_staff, login_url='signin_staff')
 def addProduct(request):
     context = {}
 
@@ -29,7 +35,8 @@ def addProduct(request):
 
     return render(request, "staff/addProduct.html", context)
 
-
+@login_required(login_url='signin_staff')
+@user_passes_test(is_staff, login_url='signin_staff')
 def editProduct(request, pk):
     context = {}
     obj = get_object_or_404(Product, pk=pk)
@@ -60,7 +67,8 @@ def editProduct(request, pk):
 
     return render(request, "staff/editProduct.html", context)
 
-
+@login_required(login_url='signin_staff')
+@user_passes_test(is_staff, login_url='signin_staff')
 def deleteProduct(request, pk):
     context = {}
     product = get_object_or_404(Product, pk=pk)
