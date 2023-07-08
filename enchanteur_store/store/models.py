@@ -11,10 +11,14 @@ class Customer(models.Model):
         return str(self.id)
 
 def create_customer(sender, instance, created, **kwargs):
+    if instance.is_staff:
+        return  # ignore staff users
     if created:
         Customer.objects.create(user=instance)
 
 def save_customer(sender, instance, **kwargs):
+    if instance.is_staff:
+        return
     instance.customer.save()
 
 models.signals.post_save.connect(create_customer, sender=User)
@@ -26,6 +30,9 @@ class Product(models.Model):
     price = models.IntegerField()
     image = models.ImageField(null=True, blank=True, upload_to='products-img/')
     featured = models.BooleanField(default=False, null=True, blank=False)
+
+    def __str__(self):
+        return self.name
 
     @property
     def imageURL(self):
@@ -61,7 +68,7 @@ class Order(models.Model):
 
 class OrderItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, blank=True)
-    order = models.ForeignKey(Order,on_delete=models.SET_NULL, null=True, blank=True)
+    order = models.ForeignKey(Order,on_delete=models.CASCADE, null=True, blank=True)
     quantity = models.IntegerField(default=0, null=True, blank=True)
     data_added = models.DateTimeField(auto_now_add= True)
 
@@ -69,6 +76,9 @@ class OrderItem(models.Model):
     def get_total(self):
         total = self.product.price * self.quantity
         return total
+    
+    def __str__(self):
+        return str(self.order)
     
 class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
